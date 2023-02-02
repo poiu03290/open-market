@@ -1,0 +1,93 @@
+/* Nav바 전체 컨테이너 */
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* 로고 이미지 */
+.icon {
+    width: 124px;
+    height: 38px;
+    margin-left: 320px;
+}
+
+/* Nav바 검색 input */
+.search {
+    width: 400px;
+    padding: 13px 0 13px 22px;
+    margin-left: 30px;
+    border: 2px solid #21BF48;
+    border-radius: 50px;
+    background: #fff url('../assets/search-img.png') no-repeat right 22px center / 28px;
+}
+
+/* 구매페이지 버튼 */
+.purchase {
+    display: flex;
+    flex-direction: row;
+    margin-left: 598px;
+}
+
+/* 판매페이지 버튼 */
+.sale {
+    display: flex;
+    flex-direction: row;
+    margin-left: 472px;
+}
+
+/* 마이페이지 버튼 박스 */
+.icon-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 20px 20px 0;
+    width: 60px; height: 50px;
+}
+
+/* 마이페이지 버튼 */
+.mypage {
+    padding: 36px 0 0 0; margin: 0;
+    font-size: 12px;
+    color: #767676;
+    line-height: 14px;
+    background: #fff url('../assets/icon-user.svg') no-repeat center 0;
+    cursor: pointer;
+    border: none;
+}
+
+/* 장바구니 버튼 */
+.cart {
+    padding: 36px 0 0 0; margin: 0;
+    font-size: 12px;
+    color: #767676;
+    line-height: 14px;
+    background: #fff url('../assets/icon-shopping-cart.svg') no-repeat center 0;
+    cursor: pointer;
+    border: none;
+}
+
+/* 판매자 센터 버튼 박스 */
+.center-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 18px 0;
+}
+
+/* 판매자 센터 버튼 */
+.btn-sale-center {
+    width: 168px;
+    height: 54px;
+    color: #fff;
+    border: none;
+    background: #21BF48 url('../assets/icon-shopping-bag.svg') no-repeat 24px center / 29px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 18px;
+    padding: 16px 20px 16px 60px;
+    margin-left: 10px;
+}
