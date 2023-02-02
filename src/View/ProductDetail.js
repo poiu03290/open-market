@@ -1,8 +1,9 @@
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect } from 'react';
 import { useParams, Link } from "react-router-dom";
 
 import { getProductDetail } from '../api/api';
 import { putInCartList } from '../api/api';
+import styles from './ProductDetail.module.css';
 
 import { Modal } from '../components/Modal';
 
@@ -69,38 +70,38 @@ export const ProductDetail = () => {
     }
 
     return(
-        <div className='product-detail-container'>
-            <div className='product-detail-box'>
+        <div className={styles.container}>
+            <div className={styles['detail-box']}>
                 <img src={productDetail.image} alt={'상품 세부 이미지'}/>
-                <div className='product-detail-info'>
+                <div className={styles.info}>
                     <div>
                         <span>{productDetail.store_name}</span>
                         <h2>{productDetail.product_name}</h2>
                         <span>{productDetail.price && productDetail.price.toLocaleString()}</span>
                     </div>
-                    <div className='product-order'>
-                        <span className='txt-shipping'>택배배송 / 무료배송</span>
+                    <div>
+                        <span className={styles.shipping}>택배배송 / 무료배송</span>
                         <p className='div-line'></p>
-                        <div className='product-count'>
-                            <input type='button' value='' onClick={handleMinus} className='btn-count-minus'/>
+                        <div className={styles.count}>
+                            <input type='button' value='' onClick={handleMinus} className={styles.minus}/>
                             <span>{count}</span>
-                            <input type='button' value='' onClick={handlePlus} className='btn-count-plus'/>
+                            <input type='button' value='' onClick={handlePlus} className={styles.plus}/>
                         </div>
                         <p className='div-line'></p>
                         <div>
-                            <div className='product-price-box'>
-                                <span className='total-price'><b>총 상품 금액</b></span>
-                                <div className='count-price'>
+                            <div className={styles['price-box']}>
+                                <span className={styles['total-price']}><b>총 상품 금액</b></span>
+                                <div className={styles.price}>
                                     <span>총 수량 <b>{count}</b>개</span>
                                     <span><b>{(Number(productDetail.price) * count).toLocaleString()}</b></span>
                                 </div>
                                 
                             </div>
-                            <div className='order-btn-box'>
+                            <div className={styles['order-box']}>
                                 <Link to='/order' onClick={orderButtonClick}>
-                                    <input type='button' value='바로 구매' className='btn-order'/>
+                                    <input type='button' value='바로 구매' className={styles.order} />
                                 </Link>
-                                <input type='button' onClick={putInCart} value='장바구니' className='btn-shipping-cart'/>
+                                <input type='button' onClick={putInCart} value='장바구니' className={styles.cart} />
                             </div>
                         </div>
                     </div>

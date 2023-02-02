@@ -1,0 +1,89 @@
+.container {
+    width: 1280px; height: 500px;
+    margin: 60px auto;
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px;
+}
+
+.slider {
+    display: flex;
+    transition: 0.5s;
+}
+
+.slider li {
+    width: 1280px;
+}
+
+.slider li img {
+    width: 1280px;
+    height: 500px;
+}
+
+.arrow {
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: 100px; height: 100px;
+    transform: translate(0, -50%);
+}
+
+.prev {
+    left: 20px;
+    background: transparent url('../assets/icon-swiper-1.svg') no-repeat center;
+}
+
+.next {
+    right: 20px;
+    background: transparent url('../assets/icon-swiper-2.svg') no-repeat center;
+}
+
+.product {
+    margin: 80px auto;
+    width: 1280px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0;
+}
+
+.list {
+    width: 380px;
+    margin: 0 0 78px 0;
+    list-style: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    color: black;
+}
+
+.list img {
+    width: 380px; height: 380px;
+    border: 1px solid #C4C4C4;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.store {
+    margin-top: 16px;
+    color: #767676;
+}
+
+.name {
+    margin-top: 10px;
+    font-size: 18px;
+    line-height: 22px;
+}
+
+.price {
+    margin-top: 10px;
+    font-size: 24px;
+    line-height: 30px;
+}
+
+.price::after {
+    content: '원';
+    font-size: 16px;
+    line-height: 20px;
+}

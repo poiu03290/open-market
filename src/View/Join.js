@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 
 import { DuplicateCheckAPI } from '../api/api';
 import { JoinAPI } from '../api/api';
+import styles from './Join.module.css'
 
 import useDetectClose from '../hooks/useDetectClose';
 import ValidationForm from '../components/ValidationForm';
@@ -101,20 +102,20 @@ export const Join = () => {
     return(
         <div className='flex-center'>
 
-          <img src={Logo} alt='로고 이미지' className='img-join-logo'/>
+          <img src={Logo} alt='로고 이미지' className={styles.logo}/>
 
-          <div className='join-container'>
-            <div className='btn-tab-box'>
+          <div className={styles.container}>
+            <div className={styles['tab-box']}>
               <input type='radio' id='select-buyer' name='member-select' checked readOnly />
-              <label htmlFor='select-buyer' className='btn-buyer'>구매회원가입</label>
+              <label htmlFor='select-buyer' className={styles.buyer}>구매회원가입</label>
               <input type='radio' name='member-select' id='select-seller'/>
-              <label htmlFor='select-seller' className='btn-seller'>판매회원가입</label>
+              <label htmlFor='select-seller' className={styles.seller}>판매회원가입</label>
             </div>
-            <div className='join-box'>
+            <div className={styles.box}>
 
-              <div className='join-input-box'>
+              <div className={styles['input-box']}>
               <label htmlFor='join-id-input'>아이디</label>
-                <div className='join-id-box'>
+                <div className={styles['id-box']}>
                   <ValidationForm 
                     type='text' 
                     value={profile.username}
@@ -124,7 +125,7 @@ export const Join = () => {
                   />
                   <button 
                     onClick={DuplicateButtonClick} 
-                    className='btn-id-valid'>
+                    className={styles.valid}>
                       중복확인
                   </button>
                 </div>
@@ -135,7 +136,7 @@ export const Join = () => {
                   onChange={(e) => setProfile({...profile, password: e.target.value})}
                   error={isValidPassword}
                   validation={joinErrorMessage.password}
-                  className={isValidPassword ? 'proper-input' : 'join-pw-input'}
+                  className={isValidPassword ? styles.proper : styles['pw-input']}
                   />
                 <label htmlFor='join-repw-input'>비밀번호 재확인</label>
                 <ValidationForm 
@@ -144,11 +145,11 @@ export const Join = () => {
                   onChange={(e) => setProfile({...profile, password2: e.target.value})}
                   error={isCorrectPassword}
                   validation={joinErrorMessage.password2}
-                  className={isCorrectPassword ? 'proper-input' : 'join-repw-input'}
+                  className={isCorrectPassword ? styles.proper : styles['repw-input']}
                   />
               </div>
               
-              <div className='join-info-box'>
+              <div className={styles['info-box']}>
                 <label htmlFor='join-name-input'>이름</label>
                 <ValidationForm 
                   type='text' 
@@ -159,12 +160,12 @@ export const Join = () => {
                   id={'join-name-input'}
                   />
                 <label htmlFor='join-phone-input'>휴대폰번호</label>
-                <div ref={dropDownRef} className='phone-box'>
+                <div ref={dropDownRef} className={styles['phone-box']}>
                   <input 
                     onClick={() => setIsOpen(!isOpen)}
                     type='button'
                     value={phoneIdentify}
-                    className={'phone-dropdown'}
+                    className={styles.dropdown}
                     />
                   <input type='number' 
                     onChange={(e) => setPhoneMidNum(e.target.value)}
@@ -180,7 +181,7 @@ export const Join = () => {
                   />
                   <span>{joinErrorMessage.phone_number}</span>
                   {isOpen && 
-                  <ul className='phone-dropdown-number'>
+                  <ul>
                       {phoneList.map((value, index) => (
                         <PhoneDropDown key={index} value={value} setPhoneIdentify={setPhoneIdentify} setIsOpen={setIsOpen} isOpen={isOpen}/>
                       ))}
@@ -188,7 +189,7 @@ export const Join = () => {
                   }
                 </div>
                 <label htmlFor='join-id-input'>이메일</label>
-                <div className='email-box'>
+                <div className={styles['email-box']}>
                   <input type='text' />
                   <span>@</span>
                   <input type='text' />
@@ -197,12 +198,13 @@ export const Join = () => {
             </div>
 
           </div>
-          <div className='join-txt-box'>
-            <div className='info-check-box'>
+          <div className={styles.txt}>
+            <div className={styles['check-box']}>
               <input 
                 type={'checkbox'} 
                 onClick={() => setInfoCheck(!infoCheck)} 
-                id='info-check' 
+                id={'info-check'}
+                className={styles.check}
                 />
               <div>
                 <label htmlFor='info-check'>호두샵의 <b><u>이용약관</u></b> 및 <b><u>개인정보처리방침</u></b>에 대한 내용을 확인하였고 동의합니다.</label>
@@ -210,7 +212,7 @@ export const Join = () => {
             </div>
             <button
               onClick={onJoinButtonClick}
-              className={isFillInput ? 'btn-join-valid' : 'btn-join'}
+              className={isFillInput ? styles['join-valid'] : styles.join}
             >가입하기</button>
           </div>
           

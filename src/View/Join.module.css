@@ -1,0 +1,247 @@
+.logo {
+    margin: 100px 0 70px;
+}
+
+
+.container {
+    border: 1px solid #C4C4C4;
+    border-radius: 10px;
+    border-top: none;
+}
+
+
+.input-box {
+    display: flex;
+    flex-direction: column;
+    padding: 35px 35px 0 35px;
+    color: #767676;
+    width: 480px;
+}
+
+
+.info-box {
+    display: flex;
+    flex-direction: column;
+    padding: 0 35px 35px 35px;
+    margin-top: 50px;
+    color: #767676;
+}
+
+
+.input-box label,
+.info-box label {
+    margin: 12px 0 10px 0;
+}
+
+
+.input-box input,
+.info-box input {
+    padding: 20px 16px;
+    border: 1px solid #C4C4C4;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+.tab-box {
+    width: 100%;
+    display: flex;
+}
+
+
+.tab-box .buyer, 
+.tab-box .seller {
+    flex: 1;
+    background-color: #C4C4C4;
+    border: 1px solid #C4C4C4;
+    border-radius: 10px 10px 0 0;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 20px 0 18px;
+    text-align: center;
+}
+
+
+.tab-box input:checked + .seller, 
+.tab-box input:checked + .buyer {
+    background-color: #fff;
+    border-width: 1px 1px 0 1px;
+}
+
+
+.id-box {
+    position: relative;
+    margin-bottom: 24px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+.id-box span {
+    position: absolute;
+    display: block;
+    bottom: -28px; left: 0;
+}
+
+
+.box span {
+    margin-top: 10px;
+}
+
+
+.valid {
+    margin-left: 12px;
+    padding: 16px 31px;
+    border-radius: 5px;
+    background-color: #21BF48;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    white-space: nowrap;
+}
+
+
+.input-box input:focus {
+    outline: none;
+}
+
+
+.input-box .id {
+    margin-bottom: 6px;
+}
+
+
+.pw-input, .repw-input {
+    background: #fff url('../assets/icon-check-off.svg') no-repeat 96% center;
+}
+
+
+.proper {
+    background: #fff url('../assets/icon-check-on.svg') no-repeat 96% center;
+}
+
+
+.phone-box, 
+.email-box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+
+.phone-box {
+    position: relative;
+    margin-bottom: 28px;
+}
+
+
+.phone-box span {
+    position: absolute;
+    display: block;
+    bottom: -28px; left: 0;
+    color: red;
+}
+
+
+.phone-box input {
+    text-align: center;
+}
+
+
+.phone-box input:nth-child(2), 
+.email-box span {
+    margin: 0 12px;
+}
+
+
+.dropdown {
+    background: #fff url('../assets/icon-down-arrow.svg') no-repeat 90% center;
+    cursor: pointer;
+}
+
+
+.dropdown ~ ul {
+    position: absolute;
+    bottom: -156px; left: 0;
+    width: 152px; height: 150px;
+    margin: 0; padding: 0;
+    border: 1px solid #C4C4C4;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: #fff;
+    overflow-y: scroll;
+}
+
+
+.dropdown ~ ul li {
+    text-align: center;
+    list-style: none;
+    padding: 10px 0;
+}
+
+
+.dropdown ~ ul li:hover {
+    background-color: #C4C4C4;
+    cursor: pointer;
+}
+
+
+.txt {
+    display: flex;
+    flex-direction: column;
+    color: #767676;
+    align-items: flex-start;
+}
+
+
+.txt div {
+    width: 454px;
+}
+
+
+.check-box {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin: 34px 0;
+}
+
+
+.check-box .check {
+    display: block;
+    margin-right: 10px;
+}
+
+
+.check-box label:hover, .check-box input:hover {
+    cursor: pointer;
+}
+
+
+.join {
+    padding: 19px 206px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #C4C4C4;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    margin-bottom: 110px;
+}
+
+
+.join-valid {
+    padding: 19px 206px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #21BF48;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    margin-bottom: 110px;
+}

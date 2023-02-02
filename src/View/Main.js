@@ -2,6 +2,7 @@ import { useState, useEffect, useCallback, useRef } from 'react';
 
 import { getProductList } from '../api/api';
 import { ProductItem } from '../components/ProductItem';
+import styles from './Main.module.css';
 
 export const Main = () => {
     const ref = useRef();
@@ -42,18 +43,18 @@ export const Main = () => {
 
     return(
         <div>
-            <div className={'main-img-section'}>
-                <ul ref={ref} className='slider-list'>
+            <div className={styles.container}>
+                <ul ref={ref} className={styles.slider}>
                     {products.results && products.results.map((value, index) => (
                         <li key={index}>
                             <img src={value.image} alt={value.product_info}/>
                         </li>
                     ))}
                 </ul>
-                <button onClick={prevButtonClick} className='btn-arrow btn-prev'></button>
-                <button onClick={nextButtonClick} className='btn-arrow btn-next'></button>
+                <button onClick={prevButtonClick} className={`${styles.prev} ${styles.arrow}`}></button>
+                <button onClick={nextButtonClick} className={`${styles.next} ${styles.arrow}`}></button>
             </div>
-            <ul className={'product-container'}>
+            <ul className={styles.product}>
                 {products.results && products.results.map((value, index) => (
                     <ProductItem key={index} products={value}/>
                 ))}

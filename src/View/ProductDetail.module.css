@@ -1,0 +1,131 @@
+.container {
+    margin: 80px 320px 180px;
+}
+
+.detail-box {
+    display: flex;
+    flex-direction: row;
+}
+
+.detail-box img {
+    width: 600px; height: 600px;
+}
+
+.info {
+    width: 100%;
+    margin-left: 50px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.info h2 {
+    margin: 16px 0 20px;
+}
+
+.shipping {
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.count {
+    margin: 30px 0;
+    font-size: 18px;
+    line-height: 23px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    border: 1px solid #767676;
+    border-radius: 5px;
+}
+
+.count span {
+    width: 48px;
+    text-align: center;
+}
+
+.count input {
+    cursor: pointer;
+    background-color: inherit;
+    width: 48px;
+    height: 48px;
+    font-size: 32px;
+    padding: 0;
+}
+
+.minus {
+    border: none;
+    border-right: 1px solid #767676;
+    background: #fff url('../assets/icon-minus-line.svg') no-repeat center;
+}
+
+.plus {
+    border: none;
+    border-left: 1px solid #767676;
+    background: #fff url('../assets/icon-plus-line.svg') no-repeat center;
+}
+
+.price-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin: 30px 0;
+}
+
+.total-price {
+    font-size: 18px;
+}
+
+.price {
+    color: #767676;
+    font-size: 18px;
+}
+
+.price b {
+    color: #21BF48;
+}
+
+.price span:first-child::after {
+    content: '|';
+    margin: 0 12px;
+}
+
+.price span:last-child {
+    font-size: 36px;
+    color: #21BF48;
+}
+
+.price span:last-child::after {
+    content: '원';
+    font-size: 18px;
+}
+
+.order-box {
+    display: flex;
+}
+
+.order-box input {
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.order {
+    background-color: #21BF48;
+    flex-grow: 2;
+    padding: 20px 160px;
+    margin: 0 14px 0 0;
+}
+
+.cart {
+    flex-grow: 1;
+    padding: 20px 64px;
+    background-color: #767676;
+}
