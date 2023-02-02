@@ -1,4 +1,3 @@
-/* Nav바 전체 컨테이너 */
 .container {
     width: 100%;
     display: flex;
@@ -7,14 +6,14 @@
     box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* 로고 이미지 */
+
 .icon {
     width: 124px;
     height: 38px;
     margin-left: 320px;
 }
 
-/* Nav바 검색 input */
+
 .search {
     width: 400px;
     padding: 13px 0 13px 22px;
@@ -24,21 +23,20 @@
     background: #fff url('../assets/search-img.png') no-repeat right 22px center / 28px;
 }
 
-/* 구매페이지 버튼 */
 .purchase {
     display: flex;
     flex-direction: row;
-    margin-left: 598px;
+    margin-left: 472px;
 }
 
-/* 판매페이지 버튼 */
+
 .sale {
     display: flex;
     flex-direction: row;
     margin-left: 472px;
 }
 
-/* 마이페이지 버튼 박스 */
+
 .icon-box {
     display: flex;
     flex-direction: column;
@@ -48,7 +46,7 @@
     width: 60px; height: 50px;
 }
 
-/* 마이페이지 버튼 */
+
 .mypage {
     padding: 36px 0 0 0; margin: 0;
     font-size: 12px;
@@ -59,7 +57,7 @@
     border: none;
 }
 
-/* 장바구니 버튼 */
+
 .cart {
     padding: 36px 0 0 0; margin: 0;
     font-size: 12px;
@@ -70,7 +68,7 @@
     border: none;
 }
 
-/* 판매자 센터 버튼 박스 */
+
 .center-box {
     display: flex;
     justify-content: center;
@@ -78,7 +76,7 @@
     margin: 18px 0;
 }
 
-/* 판매자 센터 버튼 */
+
 .btn-sale-center {
     width: 168px;
     height: 54px;
@@ -90,4 +88,45 @@
     font-size: 18px;
     padding: 16px 20px 16px 60px;
     margin-left: 10px;
+}
+
+
+.dropdown-box {
+    margin: 20px 20px 20px 0;
+    position: relative;
+}
+
+
+.dropdown {
+    z-index: 10;
+    position: absolute;
+    width: 130px;
+    top: 50%; left: 50%;
+    box-shadow: 0px 0px 5px #c4c4c4;
+    border: 1px solid #c4c4c4;
+    border-radius: 5px;
+    transform: translate(-50%, 30%);
+    padding: 0;
+}
+
+
+.dropdown li {
+    list-style: none;
+    color: #767676;
+    padding: 10px 12px;
+    margin: 10px;
+    text-align: center;
+}
+
+
+.dropdown li:not(:first-child) {
+    margin-top: 8px;
+}
+
+
+.dropdown li:hover {
+    color: #000;
+    cursor: pointer;
+    outline: 1px solid #767676;
+    border-radius: 5px;
 }

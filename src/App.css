@@ -40,10 +40,6 @@ input[type="number"]::-webkit-inner-spin-button {
     color: #21BF48;
 }
 
-.proper-input {
-    background: #fff url('./assets/icon-check-on.svg') no-repeat 96% center;
-}
-
 .error {
     color: red;
 }
@@ -55,37 +51,7 @@ input[type="number"]::-webkit-inner-spin-button {
 
 
 
-
-/* 로그인 페이지, 회원가입 페이지 */
-/* 로그인 로고 */
-.img-join-logo {
-    margin: 100px 0 70px;
-}
-
-.join-container {
-    border: 1px solid #C4C4C4;
-    border-radius: 10px;
-    border-top: none;
-}
-
-
-/* input 박스 */
-.join-input-box {
-    display: flex;
-    flex-direction: column;
-    padding: 35px 35px 0 35px;
-    color: #767676;
-}
-
-.join-input-box {
-    width: 480px;
-}
-
-.join-input-box label,
-.join-info-box label {
-    margin: 12px 0 10px 0;
-}
-
+/* 
 .join-input-box input,
 .join-info-box input {
     padding: 20px 16px;
@@ -131,7 +97,6 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 
-
 .join-input-box input:focus {
     outline: none;
 }
@@ -150,46 +115,38 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 
-
-
-
-
-
-
-
-/* 회원가입 페이지 */
 .join-info-box {
     display: flex;
     flex-direction: column;
     padding: 0 35px 35px 35px;
     margin-top: 50px;
     color: #767676;
-}
+} */
 
-.phone-box, 
+/* .phone-box, 
 .email-box {
     display: flex;
     flex-direction: row;
     align-items: center;
-}
+} */
 
-.phone-box {
+/* .phone-box {
     position: relative;
     margin-bottom: 28px;
-}
+} */
 
-.phone-box span {
+/* .phone-box span {
     position: absolute;
     display: block;
     bottom: -28px; left: 0;
     color: red;
-}
+} */
 
-.phone-box input {
+/* .phone-box input {
     text-align: center;
-}
+} */
 
-.phone-dropdown {
+/* .phone-dropdown {
     background: #fff url('./assets/icon-down-arrow.svg') no-repeat 90% center;
     cursor: pointer;
 }
@@ -214,14 +171,14 @@ input[type="number"]::-webkit-inner-spin-button {
 .phone-dropdown ~ ul li:hover {
     background-color: #C4C4C4;
     cursor: pointer;
-}
+} */
 
-.phone-box input:nth-child(2), 
+/* .phone-box input:nth-child(2), 
 .email-box span {
     margin: 0 12px;
-}
+} */
 
-.join-txt-box {
+/* .join-txt-box {
     display: flex;
     flex-direction: column;
     color: #767676;
@@ -230,25 +187,25 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .join-txt-box div {
     width: 454px;
-}
+} */
 
-.info-check-box {
+/* .info-check-box {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     margin: 34px 0;
-}
+} */
 
-#info-check {
+/* #info-check {
     display: block;
     margin-right: 10px;
 }
 
 .info-check-box label:hover, .info-check-box input:hover {
     cursor: pointer;
-}
+} */
 
-.btn-join {
+/* .btn-join {
     padding: 19px 206px;
     color: #fff;
     font-size: 18px;
@@ -270,9 +227,9 @@ input[type="number"]::-webkit-inner-spin-button {
     cursor: pointer;
     border: none;
     margin-bottom: 110px;
-}
+} */
 
-.btn-mypage-box {
+/* .btn-mypage-box {
     display: inline-block;
     margin: 20px 20px 20px 0;
     width: 60px;
@@ -323,11 +280,11 @@ input[type="number"]::-webkit-inner-spin-button {
     cursor: pointer;
     outline: 1px solid #767676;
     border-radius: 5px;
-}
+} */
 
 
 /* 메인 */
-.main-img-section {
+/* .main-img-section {
     width: 1280px; height: 500px;
     margin: 60px auto;
     overflow: hidden;
@@ -366,11 +323,11 @@ input[type="number"]::-webkit-inner-spin-button {
 .btn-next {
     right: 20px;
     background: transparent url('./assets/icon-swiper-2.svg') no-repeat center;
-}
+} */
 
 
 /* 상품 리스트 */
-.product-container {
+/* .product-container {
     margin: 80px auto;
     width: 1280px;
     display: flex;
@@ -417,10 +374,10 @@ input[type="number"]::-webkit-inner-spin-button {
     content: '원';
     font-size: 16px;
     line-height: 20px;
-}
+} */
 
 /* 특정 상품 페이지 */
-.product-detail-container {
+/* .product-detail-container {
     margin: 80px 320px 180px;
 }
 
@@ -550,7 +507,7 @@ input[type="number"]::-webkit-inner-spin-button {
     flex-grow: 1;
     padding: 20px 64px;
     background-color: #767676;
-}
+} */
 
 /* 푸터 */
 .footer-container {

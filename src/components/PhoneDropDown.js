@@ -1,7 +1,7 @@
-export const PhoneDropDown = ({ value, setPhoneIdentify, setOpen, isOpen }) => {
+export const PhoneDropDown = ({ value, setPhoneIdentify, setIsOpen, isOpen }) => {
     const ValueClick = () => {
         setPhoneIdentify(value)
-        setOpen(!isOpen)
+        setIsOpen(!isOpen)
     }
     return(
         <li onClick={ValueClick}>{value}</li>

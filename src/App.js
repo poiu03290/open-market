@@ -1,12 +1,12 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 import { MainLayOut } from './components/MainLayOut';
-import { Main } from './View/Main';
-import { Login } from './View/Login';
-import { Join } from './View/Join';
-import { ProductDetail } from './View/ProductDetail';
-import { Cart } from './View/Cart';
-import { Order } from './View/Order';
+import { Main } from './view/Main';
+import { Login } from './view/Login';
+import { Join } from './view/Join';
+import { ProductDetail } from './view/ProductDetail';
+import { Cart } from './view/Cart';
+import { Order } from './view/Order';
 
 import './App.css';
 

@@ -40,12 +40,12 @@ export const Nav = () => {
               </div>
             </Link>
 
-            <div ref={dropDownRef} className={'dropdown-box'}> 
+            <div ref={dropDownRef} className={styles['dropdown-box']}> 
               <button onClick={(e) => setIsOpen(e)} id={'btn-mypage-click'} className={styles.mypage}>
                 마이페이지
               </button>
               {isOpen && (
-                <ul className={'dropdown'}>
+                <ul className={styles.dropdown}>
                   <li value="마이페이지">마이페이지</li>
                   <li value="로그아웃" onClick={() => dispatch(removeToken())}>로그아웃</li>
                 </ul>

@@ -2,9 +2,11 @@ input[name="member-select"] {
     display: none;
 }
 
+
 .logo {
     margin: 100px 0 70px;
 }
+
 
 .container {
     border: 1px solid #C4C4C4;
@@ -12,10 +14,12 @@ input[name="member-select"] {
     border-top: none;
 }
 
+
 .tab-box {
     width: 100%;
     display: flex;
 }
+
 
 .tab-box .buyer, 
 .tab-box .seller {
@@ -29,6 +33,7 @@ input[name="member-select"] {
     padding: 20px 0 18px;
     text-align: center;
 }
+
 
 .tab-box input:checked + .seller, 
 .tab-box input:checked + .buyer {
@@ -44,6 +49,7 @@ input[name="member-select"] {
     color: #767676;
 }
 
+
 .input-box input {
     width: 480px;
     padding: 20px 0;
@@ -51,13 +57,16 @@ input[name="member-select"] {
     border-bottom: 1px solid #C4C4C4; 
 }
 
+
 .input-box input:focus {
     outline: none;
 }
 
+
 .input-box .id {
     margin-bottom: 6px;
 }
+
 
 .login {
     display: block;
@@ -73,19 +82,23 @@ input[name="member-select"] {
     cursor: pointer;
 }
 
+
 .txt-box {
     margin-top: 30px;
 }
+
 
 .txt-box a {
     text-decoration: none;
     color: #333333;
 }
 
+
 .lnk::after {
     content: '|';
     margin: 0 14px;
 }
+
 
 .warning {
     margin: 10px 0 26px 0;
