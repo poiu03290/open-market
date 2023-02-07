@@ -1,4 +1,6 @@
-import closeImage from '../assets/icon-delete.svg' 
+import styles from './Modal.module.css';
+
+import closeImage from '../assets/icon-delete.svg';
 
 let content = null;
 
@@ -33,9 +35,9 @@ function QuantityModal({ setIsModal, cart, handlePlus, handleMinus, updateQuanti
         <>
             <img src={closeImage} alt={'닫기 버튼'} onClick={() => setIsModal(false)}/>
             <article onClick={() => setIsModal(true)}>
-                <input type='button' value='' onClick={handleMinus} className='btn-count-minus'/>
+                <input type='button' value='' onClick={handleMinus} className={styles.minus} />
                 <span>{cart.quantity}</span>
-                <input type='button' value='' onClick={handlePlus} className='btn-count-plus'/>
+                <input type='button' value='' onClick={handlePlus} className={styles.plus} />
             </article>
             <div>
                 <input type='button' value='취소' onClick={() => setIsModal(false)}/>
@@ -72,8 +74,8 @@ export const Modal = ({ MODE, setIsModal, isModal, cart, handlePlus, handleMinus
 
 
     return(
-        <div className={isModal ? 'modal open-modal' : 'modal'}>
-            <div className={isModal ? 'modal-container' : 'none'} >
+        <div className={isModal ? `${styles.modal} ${styles.open}` : `${styles.modal}`}>
+            <div className={isModal ? `${styles.container}` : 'none'} >
                 {content}
             </div>
         </div>

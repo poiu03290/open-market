@@ -1,0 +1,241 @@
+.title {
+    text-align: center;
+    margin: 50px 0;
+    font-size: 36px;
+}
+
+.container {
+    padding: 0 320px;
+}
+
+.bar {
+    background-color: #F2F2F2;
+    font-size: 18px;
+    display: flex;
+    flex-direction: row;
+    padding: 20px 0;
+    border-radius: 10px;
+}
+
+.bar .info {
+    margin-left: 364px;
+}
+
+.bar .count {
+    margin-left: 379px;
+}
+
+.bar .price {
+    margin-left: 238px;
+}
+
+.product {
+    margin: 35px 0 80px;
+}
+
+.product li {
+    border: 2px solid #C4C4C4;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px 0;
+    position: relative;
+}
+
+.product li:not(:first-child) {
+    margin-top: 10px;
+}
+
+.product li label {
+    margin-left: 34px;
+}
+
+.img {
+    width: 160px; height: 160px;
+    margin-left: 40px;
+    border-radius: 10px;
+}
+
+.p-info {
+    margin-left: 36px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 420px;
+}
+
+.p-info span {
+    display: inline-block;
+}
+
+.store {
+    color: #767676;
+}
+
+.name {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.b-price {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.shopping {
+    margin-top: 40px;
+    color: #767676;
+    font-size: 14px;
+}
+
+.order {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 148px;
+}
+
+.order span {
+    color: #EB5757;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.order input {
+    padding: 10px 35px;
+    margin-top: 26px;
+    border: none;
+    border-radius: 5px;
+    background-color: #21BF48;
+    color: #fff;
+    cursor: pointer;
+}
+
+.p-count {
+    margin: 30px 0;
+    font-size: 18px;
+    line-height: 23px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    border: 1px solid #767676;
+    border-radius: 5px;
+}
+
+.p-count span {
+    width: 48px;
+    text-align: center;
+}
+
+.p-count input {
+    cursor: pointer;
+    background-color: inherit;
+    width: 48px;
+    height: 48px;
+    font-size: 32px;
+    padding: 0;
+}
+
+.minus {
+    border: none;
+    border-right: 1px solid #767676;
+    background: #fff url('../assets/icon-minus-line.svg') no-repeat center;
+}
+
+.plus {
+    border: none;
+    border-left: 1px solid #767676;
+    background: #fff url('../assets/icon-plus-line.svg') no-repeat center;
+}
+
+.delete {
+    width: 20px; height: 20px;
+    position: absolute;
+    top: 22px; right: 21px;
+    background: #fff url('../assets/icon-delete.svg') no-repeat center;
+    cursor: pointer;
+    border: none;
+}
+
+.total {
+    background-color: #F2F2F2;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 10px;
+    padding: 42px 0;
+}
+
+.total span {
+    display: block;
+}
+
+.total div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.total .t-price {
+    margin-left: 112px;
+}
+
+.total .t-bold {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 12px;
+}
+
+.total .t-bold::after {
+    content: '원';
+    font-size: 16px;
+    display: inline-block;
+    margin-left: 2px;
+}
+
+.total .t-minus {
+    background: #fff url('../assets/icon-minus-line.svg') no-repeat center;
+    width: 34px; height: 34px;
+    border-radius: 50%;
+    margin: 0 100px;
+}
+
+.total .t-plus {
+    background: #fff url('../assets/icon-plus-line.svg') no-repeat center;
+    width: 34px; height: 34px;
+    border-radius: 50%;
+    margin: 0 100px;
+}
+
+.payment-box {
+    margin-left: 229px;
+}
+
+.payment-price {
+    font-size: 36px;
+    color: #EB5757;
+}
+
+.button {
+    display: block;
+    padding: 20px 66px;
+    color: #fff;
+    background-color: #21BF48;
+    font-size: 24px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    margin: 40px auto 160px;
+    cursor: pointer;
+}
+
+.empty {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 180px 0;
+}

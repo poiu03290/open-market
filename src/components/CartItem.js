@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 import { getProductDetail } from "../api/api"
+import styles from '../view/Cart.module.css';
 
 export const CartItem = ({ 
     cartInfo, 
@@ -62,29 +63,29 @@ export const CartItem = ({
                     className="check"
                     />
                 <label htmlFor={cartInfo.product_id}></label>
-                <img src={cartItem.image} alt={'상품 이미지'} className='cart-product-img'/>
-                <div className='cart-product-info'>
-                    <span className='cart-store'>{cartItem.store_name}</span>
-                    <span className='cart-name'>{cartItem.product_name}</span>
-                    <span className='cart-price'>{Number(cartItem.price).toLocaleString()}원</span>
-                    <span className='cart-shopping'>택배배송 / 무료배송</span>
+                <img src={cartItem.image} alt={'상품 이미지'} className={styles.img}/>
+                <div className={styles['p-info']}>
+                    <span className={styles.store}>{cartItem.store_name}</span>
+                    <span className={styles.name}>{cartItem.product_name}</span>
+                    <span className={styles['b-price']}>{Number(cartItem.price).toLocaleString()}원</span>
+                    <span className={styles.shopping}>택배배송 / 무료배송</span>
                 </div>
-                <div style={{ marginLeft: '48px' }} className='product-count' onClick={() => (
+                <div style={{ marginLeft: '48px' }} className={styles['p-count']} onClick={() => (
                         setIsModal(true), 
                         setModalMODE('QUANTITY'), 
                         setCartInfo()
-                        )}>
-                    <input type='button' value='' className='btn-count-minus'/>
+                    )}>
+                    <input type='button' className={styles.minus} />
                     <span>{cartInfo.quantity}</span>
-                    <input type='button' value='' className='btn-count-plus'/>
+                    <input type='button' className={styles.plus} />
                 </div>
-                <div className='cart-order'>
+                <div className={styles.order}>
                     <span>{(Number(cartItem.price) * cartInfo.quantity).toLocaleString()}원</span>
                     <Link to={'/order'} onClick={OrderButtonClick} >
                         <input type='button' value='주문하기'/>
                     </Link>
                 </div>
-                <input type='button' className='cart-delete' onClick={() => (setIsModal(true), setModalMODE('DELETE'), setCartInfo())}/>
+                <input type='button' className={styles.delete} onClick={() => (setIsModal(true), setModalMODE('DELETE'), setCartInfo())}/>
             </li>
         </>
     )
