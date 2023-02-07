@@ -1,0 +1,38 @@
+.container {
+    background-color: #F2F2F2;
+    padding: 60px 320px;
+}
+
+.link-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.link-box span {
+    cursor: pointer;
+}
+
+.link-box span:not(:last-child)::after {
+    content: '|';
+    margin: 0 14px;
+}
+
+.sns img {
+    margin-left: 14px;
+    cursor: pointer;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    line-height: 24px;
+    margin-top: 30px;
+    color: #767676;
+}
+
+.info span:nth-child(3):after {
+    content: '| 통신판매업';
+    margin-left: 6px;
+}

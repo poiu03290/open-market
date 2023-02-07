@@ -1,0 +1,285 @@
+.title {
+    text-align: center;
+    margin: 50px 0;
+    font-size: 36px;
+}
+
+.container {
+    padding: 0 320px;
+}
+
+.bar .bar-info {
+    margin-left: 261px;
+}
+
+.bar .bar-count {
+    margin-left: 360px;
+}
+
+.bar .bar-delivery {
+    margin-left: 188px;
+}
+
+.bar .bar-price {
+    margin-left: 171px;
+}
+
+.item {
+    margin-top: 16px;
+    padding: 8px 0 18px 8px;
+    border-bottom: 2px solid #C4C4C4;
+    display: flex;
+    flex-direction: row;
+}
+.item img {
+    width: 104px; height: 104px;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+.item-info {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0 0 36px;
+    width: 440px;
+}
+
+.item-name {
+    font-size: 18px;
+    margin: 6px 0 10px;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.item-quantity {
+    color: #767676;
+    font-size: 14px;
+}
+
+
+.discount {
+    margin-left: 120px;
+}
+
+.shopping-fee {
+    margin-left: 208px;
+    font-size: 18px;
+    color: #767676;
+}
+
+.item-price {
+    margin-left: 180px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.total-price {
+    margin-top: 30px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.total-price span:first-child {
+    font-size: 18px;
+}
+
+.total-price span:last-child {
+    font-size: 24px;
+    font-weight: bold;
+    color: #EB5757;
+    margin-left: 10px;
+}
+
+.delivery-container {
+    margin: 96px 0 0 0;
+}
+
+.delivery-container h3, .payment-container h3 {
+    font-size: 24px;
+    margin: 0 0 18px 0;
+}
+
+.receiver {
+    margin-top: 40px;   
+}
+
+.receiver h4 {
+    font-size: 18px;  
+    margin-bottom: 8px;
+}
+
+.input-wrap, .phone-wrap, .delivery-wrap {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-bottom: 1px solid #c4c4c4;
+}
+
+.input-wrap p, .phone-wrap p, .delivery-wrap p {
+    width: 170px;
+}
+
+.input-wrap div, .phone-wrap div {
+    width: 334px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.input-wrap div input, 
+.phone-wrap div input, 
+.post-wrap input, 
+.message-wrap input {
+    border: 1px solid #c4c4c4;
+    height: 40px;
+    padding: 0 0 0 8px;
+    margin: 8px 0;
+}
+
+.input-wrap div input {
+    width: 100%;
+}
+
+.phone-wrap div input {
+    width: 80px;
+}
+
+.post-wrap, .message-wrap {
+    width: 800px;
+}
+
+.post-wrap input {
+    width: 170px;
+    margin-right: 10px;
+}
+
+.post-wrap .btn-post {
+    background-color: #21BF48;
+    color: #fff;
+    border-radius: 5px;
+    border: 1px solid #21BF48;
+    cursor: pointer;
+    padding: 10px 30px;
+}
+
+.post-wrap div {
+    display: flex;
+    flex-direction: column;
+}
+
+.post-wrap div input, .message-wrap input {
+    width: 100%;
+}
+
+.post-wrap div input:first-child {
+    margin: 0 0 8px 0;
+}
+
+.payment-container {
+    margin: 70px 0 120px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.method-wrap input, .method-wrap label {
+    cursor: pointer;
+}
+
+.method-wrap input {
+    margin: 18px 10px;
+}
+
+.method-wrap label {
+    margin: 0 10px 0 0;
+}
+
+.final-pay-container article {
+    border: 2px solid #21BF48;
+    border-radius: 10px;
+    padding-top: 32px;
+    width: 480px;
+}
+
+.pay-wrap, .pay-price {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pay-wrap {
+    margin: 0 30px 15px;
+}
+
+.pay-wrap span:last-child {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.pay-wrap span:last-child::after {
+    content: '원';
+    color: #767676;
+    font-size: 14px;
+    margin-left: 4px;
+}
+
+.pay-price {
+    margin: 0 30px 24px;
+    padding-top: 29px;
+    border-top: 1px solid #c4c4c4;
+}
+
+.pay-price span:last-child {
+    font-size: 24px;
+    font-weight: bold;
+    color: #EB5757;
+}
+
+
+
+
+.area {
+    background-color: #F2F2F2;
+    padding: 30px;
+}
+
+.check-area {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.check-area input {
+    margin-right: 10px;
+}
+
+.check-area input, .check-area label {
+    cursor: pointer;
+}
+
+
+.pay {
+    padding: 20px 64px;
+    color: #fff;
+    background-color: #c4c4c4;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 24px;
+    margin: 30px auto 0;
+    cursor: pointer;
+    display: block;
+}
+
+.pay-check {
+    background-color: #21BF48;
+}
+
+.check-area .check {
+    display: block;
+}
+

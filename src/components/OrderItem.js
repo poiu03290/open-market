@@ -1,5 +1,7 @@
 import { useEffect } from 'react';
 
+import styles from '../view/Order.module.css';
+
 
 export const OrderItem = ({ orderInfo, orderData, setOrderData }) => {
     useEffect(() => {
@@ -15,20 +17,20 @@ export const OrderItem = ({ orderInfo, orderData, setOrderData }) => {
     }, [orderInfo])
     return (
         <>
-            <li className="order-item">
+            <li className={styles.item}>
                 <img src={orderInfo.image} alt={'주문한 이미지'}/>
-                <div className="order-item-info">
+                <div className={styles['item-info']}>
                     <span>{orderInfo.store_name}</span>
-                    <span className="order-item-name">{orderInfo.product_name}</span>
-                    <span className="order-item-quantity">수량 : {orderInfo.quantity}개</span>
+                    <span className={styles['item-name']}>{orderInfo.product_name}</span>
+                    <span className={styles['item-quantity']}>수량 : {orderInfo.quantity}개</span>
                 </div>
-                <div className="order-discount flex-center">
+                <div className={`${styles.discount} flex-center`}>
                     -
                 </div>
-                <div className="order-shopping-fee flex-center">
+                <div className={`${styles['shopping-fee']} flex-center`}>
                     {orderInfo.shipping_fee.toLocaleString()}
                 </div>
-                <div className="order-item-price flex-center">
+                <div className={`${styles['item-price']} flex-center`}>
                     {orderInfo.total_price.toLocaleString()}원
                 </div>
             </li>

@@ -1,0 +1,129 @@
+@keyframes modal-bg-show {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0; right: 0; bottom: 0; left: 0;
+    z-index: 99;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+
+.container {
+    width: 360px;
+    height: 200px;
+    border: 1px solid #c4c4c4;
+    position: relative;
+    margin: 0 auto;
+    top: 300px;
+    overflow: hidden;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+
+.open {
+    display: block;
+    animation: modal-bg-show 0.3s;
+}
+
+
+.container p {
+    margin: 60px 36px 32px;
+}
+
+
+.container img {
+    cursor: pointer;
+    width: 20px; height: 20px;
+    position: absolute;
+    top: 20px; right: 20px;
+}
+
+
+.container h4 {
+    margin: 60px 0 40px;
+    text-align: center;
+} 
+
+
+.container div {
+    text-align: center;
+}
+
+
+.container div input {
+    width: 100px; height: 40px;
+    cursor: pointer;
+}
+
+
+.container div input:first-child {
+    margin-right: 10px;
+    font-size: 16px;
+    border: 1px solid #c4c4c4;
+    background-color: #fff;
+    color: #767676;
+    border-radius: 5px;
+}
+
+
+.container div input:last-child {
+    font-size: 16px;
+    border: 1px solid #21BF48;
+    background-color: #21BF48;
+    color: #fff;
+    border-radius: 5px;
+}
+
+
+.container article {
+    font-size: 18px;
+    line-height: 23px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    border: 1px solid #767676;
+    border-radius: 5px;
+    margin: 44px auto 26px;
+}
+
+
+.container article span {
+    width: 48px;
+    text-align: center;
+}
+
+
+.container article input {
+    cursor: pointer;
+    background-color: inherit;
+    width: 48px;
+    height: 48px;
+    font-size: 32px;
+    padding: 0;
+}
+
+
+.minus {
+    border: none;
+    border-right: 1px solid #767676;
+    background: #fff url('../assets/icon-minus-line.svg') no-repeat center;
+}
+
+
+.plus {
+    border: none;
+    border-left: 1px solid #767676;
+    background: #fff url('../assets/icon-plus-line.svg') no-repeat center;
+}

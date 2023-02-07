@@ -14,6 +14,28 @@ input[type="number"]::-webkit-inner-spin-button {
     margin: 0;
 }
 
+input[type="checkbox"] {
+    display: none;
+}
+input[type="checkbox"] + label {
+    display: inline-block;
+    width: 20px; height: 20px;
+    border: 2px solid #21BF48;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+}
+.check:checked + label::after {
+    content: '';
+    background-color: #21BF48;
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    border-radius: 50%;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 .div-line {
     border: 1px solid #C4C4C4;
     margin: 0;
@@ -510,12 +532,12 @@ input[type="number"]::-webkit-inner-spin-button {
 } */
 
 /* 푸터 */
-.footer-container {
+/* .footer-container {
     background-color: #F2F2F2;
     padding: 60px 320px;
-}
+} */
 
-.footer-link-box {
+/* .footer-link-box {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -529,14 +551,14 @@ input[type="number"]::-webkit-inner-spin-button {
 .footer-link-box span:not(:last-child)::after {
     content: '|';
     margin: 0 14px;
-}
+} */
 
-.sns-box img {
+/* .sns-box img {
     margin-left: 14px;
     cursor: pointer;
-}
+} */
 
-.footer-info {
+/* .footer-info {
     display: flex;
     flex-direction: column;
 }
@@ -545,34 +567,34 @@ input[type="number"]::-webkit-inner-spin-button {
     line-height: 24px;
     margin-top: 30px;
     color: #767676;
-}
+} */
 
-.footer-info span:nth-child(3):after {
+/* .footer-info span:nth-child(3):after {
     content: '| 통신판매업';
     margin-left: 6px;
-}
+} */
 
 /* 장바구니 */
-.cart-title, .order-title {
+/* .cart-title, .order-title {
     text-align: center;
     margin: 50px 0;
     font-size: 36px;
-}
+} */
 
-.cart-container, .order-container {
+/* .cart-container, .order-container {
     padding: 0 320px;
-}
+} */
 
-.cart-bar, .order-bar {
+/* .cart-bar, .order-bar {
     background-color: #F2F2F2;
     font-size: 18px;
     display: flex;
     flex-direction: row;
     padding: 20px 0;
     border-radius: 10px;
-}
+} */
 
-.cart-bar .bar-info {
+/* .cart-bar .bar-info {
     margin-left: 364px;
 }
 
@@ -582,31 +604,11 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .cart-bar .bar-price {
     margin-left: 238px;
-}
+} */
 
-input[type="checkbox"] {
-    display: none;
-}
-input[type="checkbox"] + label {
-    display: inline-block;
-    width: 20px; height: 20px;
-    border: 2px solid #21BF48;
-    border-radius: 50%;
-    cursor: pointer;
-    position: relative;
-}
-.check:checked + label::after {
-    content: '';
-    background-color: #21BF48;
-    width: 14px;
-    height: 14px;
-    position: absolute;
-    border-radius: 50%;
-    top: 50%; left: 50%;
-    transform: translate(-50%, -50%);
-}
 
-.cart-product-list {
+
+/* .cart-product-list {
     margin: 35px 0 80px;
 }
 
@@ -626,15 +628,15 @@ input[type="checkbox"] + label {
 
 .cart-product-list li label {
     margin-left: 34px;
-}
+} */
 
-.cart-product-img {
+/* .cart-product-img {
     width: 160px; height: 160px;
     margin-left: 40px;
     border-radius: 10px;
-}
+} */
 
-.cart-product-info {
+/* .cart-product-info {
     margin-left: 36px;
     display: flex;
     flex-direction: column;
@@ -644,9 +646,9 @@ input[type="checkbox"] + label {
 
 .cart-product-info span {
     display: inline-block;
-}
+} */
 
-.cart-store {
+/* .cart-store {
     color: #767676;
 }
 
@@ -664,9 +666,9 @@ input[type="checkbox"] + label {
     margin-top: 40px;
     color: #767676;
     font-size: 14px;
-}
+} */
 
-.cart-order {
+/* .cart-order {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -687,18 +689,18 @@ input[type="checkbox"] + label {
     background-color: #21BF48;
     color: #fff;
     cursor: pointer;
-}
+} */
 
-.cart-delete {
+/* .cart-delete {
     width: 20px; height: 20px;
     position: absolute;
     top: 22px; right: 21px;
     background: #fff url('./assets/icon-delete.svg') no-repeat center;
     cursor: pointer;
     border: none;
-}
+} */
 
-.cart-total {
+/* .cart-total {
     background-color: #F2F2F2;
     display: flex;
     flex-direction: row;
@@ -715,49 +717,49 @@ input[type="checkbox"] + label {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
+} */
 
-.tot-price {
+/* .total .tot-price {
     margin-left: 112px;
 }
 
-.tot-bold {
+.total .tot-bold {
     font-size: 24px;
     font-weight: bold;
     margin-top: 12px;
 }
 
-.tot-bold::after {
+.total .tot-bold::after {
     content: '원';
     font-size: 16px;
     display: inline-block;
     margin-left: 2px;
 }
 
-.tot-minus {
+.total .tot-minus {
     background: #fff url('./assets/icon-minus-line.svg') no-repeat center;
     width: 34px; height: 34px;
     border-radius: 50%;
     margin: 0 100px;
 }
 
-.tot-plus {
+.total .tot-plus {
     background: #fff url('./assets/icon-plus-line.svg') no-repeat center;
     width: 34px; height: 34px;
     border-radius: 50%;
     margin: 0 100px;
-}
+} */
 
-.payment-price-box {
+/* .payment-price-box {
     margin-left: 229px;
 }
 
 .payment-price {
     font-size: 36px;
     color: #EB5757;
-}
+} */
 
-.cart-order-button {
+/* .cart-order-button {
     display: block;
     padding: 20px 66px;
     color: #fff;
@@ -768,17 +770,17 @@ input[type="checkbox"] + label {
     border-radius: 5px;
     margin: 40px auto 160px;
     cursor: pointer;
-}
+} */
 
-.modal {
+/* .modal {
     display: none;
     position: fixed;
     top: 0; right: 0; bottom: 0; left: 0;
     z-index: 99;
     background-color: rgba(0, 0, 0, 0.6);
-}
+} */
 
-.modal-container {
+/* .modal-container {
     width: 360px;
     height: 200px;
     border: 1px solid #c4c4c4;
@@ -788,23 +790,23 @@ input[type="checkbox"] + label {
     overflow: hidden;
     background-color: #fff;
     border-radius: 5px;
-}
+} */
 
-.open-modal {
+/* .open-modal {
     display: block;
     animation: modal-bg-show 0.3s;
-}
+} */
 
-@keyframes modal-bg-show {
+/* @keyframes modal-bg-show {
     from {
         opacity: 0;
     }
     to {
         opacity: 1;
     }
-}
+} */
 
-.modal-container p {
+/* .modal-container p {
     margin: 60px 36px 32px;
 }
 
@@ -871,21 +873,20 @@ input[type="checkbox"] + label {
     height: 48px;
     font-size: 32px;
     padding: 0;
-}
+} */
 
 /* 장바구니 비어있을 때 */
-.empty-container {
+/* .empty-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 180px 0;
-}
+} */
 
 
 /* 주문/결제하기 */
-
-.order-bar .bar-info {
+/* .order-bar .bar-info {
     margin-left: 261px;
 }
 
@@ -899,9 +900,9 @@ input[type="checkbox"] + label {
 
 .order-bar .bar-price {
     margin-left: 171px;
-}
+} */
 
-.order-item {
+/* .order-item {
     margin-top: 16px;
     padding: 8px 0 18px 8px;
     border-bottom: 2px solid #C4C4C4;
@@ -912,46 +913,46 @@ input[type="checkbox"] + label {
     width: 104px; height: 104px;
     border-radius: 10px;
     display: inline-block;
-}
+} */
 
-.order-item-info {
+/* .order-item-info {
     display: flex;
     flex-direction: column;
     margin: 20px 0 0 36px;
     width: 440px;
-}
+} */
 
-.order-item-name {
+/* .order-item-name {
     font-size: 18px;
     margin: 6px 0 10px;
     display: block;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-}
+} */
 
-.order-item-quantity {
+/* .order-item-quantity {
     color: #767676;
     font-size: 14px;
-}
+} */
 
-.order-discount {
+/* .order-discount {
     margin-left: 120px;
-}
+} */
 
-.order-shopping-fee {
+/* .order-shopping-fee {
     margin-left: 208px;
     font-size: 18px;
     color: #767676;
-}
+} */
 
-.order-item-price {
+/* .order-item-price {
     margin-left: 180px;
     font-weight: bold;
     font-size: 18px;
-}
+} */
 
-.order-total-price {
+/* .order-total-price {
     margin-top: 30px;
     display: flex;
     justify-content: flex-end;
@@ -967,27 +968,27 @@ input[type="checkbox"] + label {
     font-weight: bold;
     color: #EB5757;
     margin-left: 10px;
-}
+} */
 
-.order-delivery-container {
+/* .order-delivery-container {
     margin: 96px 0 0 0;
 }
 
 .order-delivery-container h3, .payment-container h3 {
     font-size: 24px;
     margin: 0 0 18px 0;
-}
+} */
 
-.order-receiver {
+/* .order-receiver {
     margin-top: 40px;   
 }
 
 .order-receiver h4 {
     font-size: 18px;  
     margin-bottom: 8px;
-}
+} */
 
-.order-input-wrap, .order-phone-wrap, .order-delivery-wrap {
+/* .order-input-wrap, .order-phone-wrap, .order-delivery-wrap {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -1052,16 +1053,16 @@ input[type="checkbox"] + label {
 
 .order-post-wrap div input:first-child {
     margin: 0 0 8px 0;
-}
+} */
 
-.payment-container {
+/* .payment-container {
     margin: 70px 0 120px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-}
+} */
 
-.payment-method-wrap input, .payment-method-wrap label {
+/* .payment-method-wrap input, .payment-method-wrap label {
     cursor: pointer;
 }
 
@@ -1071,16 +1072,16 @@ input[type="checkbox"] + label {
 
 .payment-method-wrap label {
     margin: 0 10px 0 0;
-}
+} */
 
-.final-pay-info-container article {
+/* .final-pay-info-container article {
     border: 2px solid #21BF48;
     border-radius: 10px;
     padding-top: 32px;
     width: 480px;
-}
+} */
 
-.pay-info-wrap, .pay-total-price {
+/* .pay-info-wrap, .pay-total-price {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -1101,9 +1102,9 @@ input[type="checkbox"] + label {
     color: #767676;
     font-size: 14px;
     margin-left: 4px;
-}
+} */
 
-.pay-total-price {
+/* .pay-total-price {
     margin: 0 30px 24px;
     padding-top: 29px;
     border-top: 1px solid #c4c4c4;
@@ -1113,9 +1114,9 @@ input[type="checkbox"] + label {
     font-size: 24px;
     font-weight: bold;
     color: #EB5757;
-}
+} */
 
-.pay-area {
+/* .pay-area {
     background-color: #F2F2F2;
     padding: 30px;
 }
@@ -1132,9 +1133,9 @@ input[type="checkbox"] + label {
 
 .pay-check-area input, .pay-check-area label {
     cursor: pointer;
-}
+} */
 
-.btn-pay {
+/* .btn-pay {
     padding: 20px 64px;
     color: #fff;
     background-color: #c4c4c4;
@@ -1153,4 +1154,4 @@ input[type="checkbox"] + label {
 
 #pay-check {
     display: block;
-}
+} */

@@ -10,30 +10,23 @@
 .icon {
     width: 124px;
     height: 38px;
-    margin-left: 320px;
+    margin-left: 20em;
 }
 
 
 .search {
     width: 400px;
-    padding: 13px 0 13px 22px;
-    margin-left: 30px;
+    padding: 0.8125em 0 0.8125em 1.375em;
+    margin-left: 1.875em;
     border: 2px solid #21BF48;
     border-radius: 50px;
     background: #fff url('../assets/search-img.png') no-repeat right 22px center / 28px;
 }
 
-.purchase {
+.purchase, .sale {
     display: flex;
     flex-direction: row;
-    margin-left: 472px;
-}
-
-
-.sale {
-    display: flex;
-    flex-direction: row;
-    margin-left: 472px;
+    margin-left: 29.5em;
 }
 
 
@@ -42,30 +35,27 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 20px 20px 20px 0;
+    margin: 1.25em 1.25em 1.25em 0;
     width: 60px; height: 50px;
+}
+
+.mypage, .cart {
+    padding: 3em 0 0 0; margin: 0;
+    font-size: 0.75rem;
+    color: #767676;
+    line-height: 14px;
+    cursor: pointer;
+    border: none;
 }
 
 
 .mypage {
-    padding: 36px 0 0 0; margin: 0;
-    font-size: 12px;
-    color: #767676;
-    line-height: 14px;
     background: #fff url('../assets/icon-user.svg') no-repeat center 0;
-    cursor: pointer;
-    border: none;
 }
 
 
 .cart {
-    padding: 36px 0 0 0; margin: 0;
-    font-size: 12px;
-    color: #767676;
-    line-height: 14px;
     background: #fff url('../assets/icon-shopping-cart.svg') no-repeat center 0;
-    cursor: pointer;
-    border: none;
 }
 
 
@@ -73,7 +63,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 18px 0;
+    margin: 1.125em 0;
 }
 
 
@@ -85,14 +75,14 @@
     background: #21BF48 url('../assets/icon-shopping-bag.svg') no-repeat 24px center / 29px;
     cursor: pointer;
     border-radius: 5px;
-    font-size: 18px;
-    padding: 16px 20px 16px 60px;
-    margin-left: 10px;
+    font-size: 1.125rem;
+    padding: 0.88em 1.11em 0.88em 3.33em;
+    margin-left: 0.55em;
 }
 
 
 .dropdown-box {
-    margin: 20px 20px 20px 0;
+    margin: 1.25em 1.25em 1.25em 0;
     position: relative;
 }
 
@@ -113,14 +103,14 @@
 .dropdown li {
     list-style: none;
     color: #767676;
-    padding: 10px 12px;
-    margin: 10px;
+    padding: 0.625em 0.75em;
+    margin: 0.625em;
     text-align: center;
 }
 
 
 .dropdown li:not(:first-child) {
-    margin-top: 8px;
+    margin-top: 0.5em;
 }
 
 
@@ -129,4 +119,11 @@
     cursor: pointer;
     outline: 1px solid #767676;
     border-radius: 5px;
+}
+
+
+@media screen and (max-width: 768px) {
+    /* .icon {
+        font-size: 0.75rem;
+    } */
 }
