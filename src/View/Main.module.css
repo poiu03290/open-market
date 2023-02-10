@@ -1,4 +1,9 @@
 .container {
+    padding: 0 1.5rem;
+}
+
+
+.slider-container {
     max-width: 1280px; 
     height: 500px;
     margin: 3.75em auto;
@@ -58,8 +63,8 @@
 
 
 .list {
-    width: 380px;
-    margin: 0 0 4.875em 0;
+    width: 32%;
+    margin-bottom: 4.875em;
     list-style: none;
     cursor: pointer;
     display: flex;
@@ -67,14 +72,17 @@
     color: black;
 }
 
+.box {
+    width: 23.75em; height: 23.75em;
+}
+
 
 .list img {
-    width: 380px; height: 380px;
+    width: 100%; height: 100%;
     border: 1px solid #C4C4C4;
     border-radius: 10px;
     box-sizing: border-box;
 }
-
 
 .store {
     margin-top: 1em;
@@ -100,4 +108,29 @@
     content: '원';
     font-size: 1rem;
     line-height: 20px;
+}
+
+@media screen and (max-width: 1023px) {
+    .product {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .list {
+        margin-bottom: 2em;
+    }
+
+    .box {
+        width: 20em; height: 20em;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .list {
+        margin-bottom: 2em;
+    }
+
+    .box {
+        width: 15em; height: 15em;
+    }
 }

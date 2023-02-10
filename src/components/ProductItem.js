@@ -8,10 +8,13 @@ export const ProductItem = ({ products }) => {
             {
                 products && 
                 <li className={styles.list}>
-                    <img src={products.image} alt={'상품 이미지'} />
+                    <div className={styles.box}>
+                        <img src={products.image} alt={'상품 이미지'} />
+                    </div>
                     <span className={styles.store}>{products.store_name}</span>
                     <span className={styles.name}>{products.product_name}</span>
                     <span className={styles.price}>{products.price.toLocaleString()}</span>
+                    
                 </li>
             }
         </Link>

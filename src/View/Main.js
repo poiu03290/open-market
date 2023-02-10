@@ -20,7 +20,7 @@ export const Main = () => {
     }, [])
 
     useEffect(() => {
-        ref.current.style.marginLeft = `${-currentSlide * 100}%`;
+        ref.current.style.marginLeft = `${-currentSlide * 1280}px`;
     }, [currentSlide])
 
     const isCheckActivePrevbutton = useCallback(() => {
@@ -42,8 +42,8 @@ export const Main = () => {
     }, [isCheckActiveNextbutton])
 
     return(
-        <div>
-            <div className={styles.container}>
+        <div className={styles.container}>
+            <div className={styles['slider-container']}>
                 <ul ref={ref} className={styles.slider}>
                     {products.results && products.results.map((value, index) => (
                         <li key={index}>

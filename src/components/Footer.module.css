@@ -1,6 +1,11 @@
 .container {
     background-color: #F2F2F2;
-    padding: 3.75em 20em;
+    padding: 3.75em 0;
+}
+
+.inner {
+    margin: 0 auto;
+    max-width: 1280px;
 }
 
 .link-box {
@@ -35,4 +40,25 @@
 .info span:nth-child(3):after {
     content: '| 통신판매업';
     margin-left: 0.375em;
+}
+
+@media screen and (max-width: 1023px) {
+    .container {
+        font-size: 0.875rem;
+        padding: 3rem 2rem;
+    }
+
+    .link-box {
+        flex-wrap: wrap;
+    }
+
+    .sns img {
+        margin: 0.75em 0.875em 0 0;
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .container {
+        font-size: 0.75rem;
+    }
 }

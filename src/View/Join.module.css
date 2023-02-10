@@ -16,10 +16,6 @@
     color: #767676;
 }
 
-.input-box {
-    width: 480px;
-}
-
 
 .info-box {
     padding: 0 2.25em 2.25em 2.25em;
@@ -160,7 +156,7 @@
 .dropdown ~ ul {
     position: absolute;
     bottom: -156px; left: 0;
-    width: 152px; height: 150px;
+    width: 32%; height: 150px;
     margin: 0; padding: 0;
     border: 1px solid #C4C4C4;
     border-radius: 5px;
@@ -232,4 +228,35 @@
 
 .join-valid {
     background-color: #21BF48;
+}
+
+@media screen and (max-width: 767px) {
+    label {
+        font-size: 0.875rem;
+    }
+
+
+    .tab-box .buyer,
+    .tab-box .seller {
+        font-size: 0.875rem;
+    }
+
+
+    .input-box, .info-box {
+        padding: 1.725em 1.725em 0 1.725em;
+    }
+    
+    .info-box {
+        padding: 0 1.725em 1.725em 1.725em;
+        margin-top: 2.25em;
+    }
+
+    .valid {
+        padding: 0.875em 1em; 
+        font-size: 0.75rem;
+    }
+
+    .join, .join-valid {
+        font-size: 1rem;
+    }
 }

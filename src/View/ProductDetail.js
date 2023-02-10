@@ -79,7 +79,7 @@ export const ProductDetail = () => {
                         <h2>{productDetail.product_name}</h2>
                         <span>{productDetail.price && productDetail.price.toLocaleString()}</span>
                     </div>
-                    <div>
+                    <div className={styles.subinfo}>
                         <span className={styles.shipping}>택배배송 / 무료배송</span>
                         <p className='div-line'></p>
                         <div className={styles.count}>
