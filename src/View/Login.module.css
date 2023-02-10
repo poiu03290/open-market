@@ -104,3 +104,25 @@ input[name="member-select"] {
     margin: 0.625em 0 1.625em 0;
     color: #EB5757;
 }
+
+@media screen and (max-width: 767px) {
+    .tab-box .buyer,
+    .tab-box .seller {
+        font-size: 0.875rem;
+    }
+
+
+    .input-box input {
+        width: 320px;
+    }
+
+
+    .login {
+        width: 320px;
+        font-size: 0.875rem;
+    }
+
+    .txt-box {
+        font-size: 0.875rem;
+    }
+}

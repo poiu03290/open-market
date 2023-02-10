@@ -7,7 +7,7 @@ import Youtube from '../assets/icon-yt.svg'
 export const Footer = () => {
     return(
         <footer className={styles.container}>
-            <div>
+            <div className={styles.inner}>
                 <div className={styles['link-box']}>
                     <div>
                         <span>호두샵 소개</span>

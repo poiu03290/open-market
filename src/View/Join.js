@@ -1,5 +1,5 @@
 import { useState, useRef, useMemo, useCallback, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 import { DuplicateCheckAPI } from '../api/api';
 import { JoinAPI } from '../api/api';
@@ -109,8 +109,9 @@ export const Join = () => {
   
     return(
         <div className='flex-center'>
-
-          <img src={Logo} alt='로고 이미지' className={styles.logo}/>
+          <Link to='/'>
+            <img src={Logo} alt='로고 이미지' className={styles.logo}/>
+          </Link>
 
           <div className={styles.container}>
             <div className={styles['tab-box']}>
