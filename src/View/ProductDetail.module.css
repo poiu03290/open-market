@@ -1,37 +1,43 @@
 .container {
-    margin: 80px 320px 180px;
+    margin: 5em 20em 11.25em;
 }
+
 
 .detail-box {
     display: flex;
     flex-direction: row;
 }
 
+
 .detail-box img {
     width: 600px; height: 600px;
 }
 
+
 .info {
     width: 100%;
-    margin-left: 50px;
+    margin-left: 3.125em;
     overflow: hidden;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
+
 .info h2 {
-    margin: 16px 0 20px;
+    margin: 1em 0 1.25em;
 }
+
 
 .shipping {
     display: inline-block;
-    margin-bottom: 20px;
+    margin-bottom: 1.25em;
 }
 
+
 .count {
-    margin: 30px 0;
-    font-size: 18px;
+    font-size: 1.125rem;
+    margin: 1.66em 0;
     line-height: 23px;
     display: flex;
     flex-direction: row;
@@ -42,19 +48,22 @@
     border-radius: 5px;
 }
 
+
 .count span {
     width: 48px;
     text-align: center;
 }
 
+
 .count input {
+    font-size: 2rem;
     cursor: pointer;
     background-color: inherit;
     width: 48px;
     height: 48px;
-    font-size: 32px;
     padding: 0;
 }
+
 
 .minus {
     border: none;
@@ -62,70 +71,82 @@
     background: #fff url('../assets/icon-minus-line.svg') no-repeat center;
 }
 
+
 .plus {
     border: none;
     border-left: 1px solid #767676;
     background: #fff url('../assets/icon-plus-line.svg') no-repeat center;
 }
 
+
 .price-box {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-end;
-    margin: 30px 0;
+    margin: 1.875em 0;
 }
 
+
 .total-price {
-    font-size: 18px;
+    font-size: 1rem;
 }
+
 
 .price {
     color: #767676;
-    font-size: 18px;
+    font-size: 1.125rem;
 }
+
 
 .price b {
     color: #21BF48;
 }
 
+
 .price span:first-child::after {
     content: '|';
-    margin: 0 12px;
+    margin: 0 0.75em;
 }
 
+
 .price span:last-child {
-    font-size: 36px;
+    font-size: 2.25rem;
     color: #21BF48;
 }
 
+
 .price span:last-child::after {
     content: '원';
-    font-size: 18px;
+    font-size: 1.125rem;
 }
+
 
 .order-box {
     display: flex;
 }
 
+
 .order-box input {
+    font-size: 1.125rem;
     color: #fff;
     font-weight: bold;
-    font-size: 18px;
     border-radius: 5px;
     border: none;
     cursor: pointer;
 }
 
+
 .order {
     background-color: #21BF48;
     flex-grow: 2;
-    padding: 20px 160px;
-    margin: 0 14px 0 0;
+    padding: 1.11em 8.88em;
+    margin: 0 0.77em 0 0;
 }
+
 
 .cart {
     flex-grow: 1;
-    padding: 20px 64px;
+    padding: 1.11em 3.55em;
     background-color: #767676;
 }

@@ -14,6 +14,15 @@ export const Order = () => {
     const [phoneMidNum, setPhoneMidNum] = useState('');
     const [phoneEndNum, setPhoneEndNum] = useState('');
 
+    const computeTotalPrice = useCallback(() => {
+        let sum = 0;
+        for (let price of orderList) {
+            sum += price.total_price
+        }
+
+        return sum
+    }, [orderList])
+
     useEffect(() => {
         const orderProduct = localStorage.getItem('order')
         const cartOrderProduct = localStorage.getItem('cart-order')
@@ -26,7 +35,7 @@ export const Order = () => {
     useEffect(() => {
         const computedPrice = computeTotalPrice()
         setPrice(computedPrice)
-    }, [orderList])
+    }, [orderList, computeTotalPrice])
 
 
     useEffect(() => {
@@ -35,22 +44,13 @@ export const Order = () => {
         })
       }, [phoneIdentify, phoneMidNum, phoneEndNum])
 
+      
     useEffect(() => {
         setOrderData({...orderData,
             total_price: price
         })
     }, [price])
     
-
-    const computeTotalPrice = useCallback(() => {
-        let sum = 0;
-        for (let price of orderList) {
-            sum += price.total_price
-        }
-
-        return sum
-    }, [orderList])
-
 
     const onUserGuessInput = useCallback((e) => {
         const maxLengthCheck = (e) => {
@@ -173,7 +173,7 @@ export const Order = () => {
                             <p>배송주소</p>
                             <div className={styles['post-wrap']}>
                                 <input type='text'/>
-                                <button type='button' value='우편번호 조회' onClick={() => alert('UI만 존재합니다 :(')} className='btn-post'>우편번호 조회</button>
+                                <button type='button' value='우편번호 조회' onClick={() => alert('UI만 존재합니다 :(')} className={styles.post}>우편번호 조회</button>
                                 <div>
                                     <input 
                                         type='text' 

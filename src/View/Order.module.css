@@ -1,115 +1,136 @@
 .title {
     text-align: center;
-    margin: 50px 0;
-    font-size: 36px;
+    margin: 1.38em 0;
+    font-size: 2.25rem;
 }
+
 
 .container {
-    padding: 0 320px;
+    padding: 0 20em;
 }
+
 
 .bar .bar-info {
-    margin-left: 261px;
+    margin-left: 16.25em;
 }
+
 
 .bar .bar-count {
-    margin-left: 360px;
+    margin-left: 22.5em;
 }
+
 
 .bar .bar-delivery {
-    margin-left: 188px;
+    margin-left: 11.75em;
 }
+
 
 .bar .bar-price {
-    margin-left: 171px;
+    margin-left: 10.625em;
 }
 
+
 .item {
-    margin-top: 16px;
-    padding: 8px 0 18px 8px;
+    margin-top: 1em;
+    padding: 0.5em 0 1.125em 0.5em;
     border-bottom: 2px solid #C4C4C4;
     display: flex;
     flex-direction: row;
 }
+
+
 .item img {
     width: 104px; height: 104px;
     border-radius: 10px;
     display: inline-block;
 }
 
+
 .item-info {
     display: flex;
     flex-direction: column;
-    margin: 20px 0 0 36px;
+    margin: 1.25em 0 0 2.25em;
     width: 440px;
 }
 
+
 .item-name {
-    font-size: 18px;
-    margin: 6px 0 10px;
+    font-size: 1.125rem;
+    margin: 0.33em 0 0.55em;
     display: block;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 }
 
+
 .item-quantity {
     color: #767676;
-    font-size: 14px;
+    font-size: 0.875em;
 }
 
 
 .discount {
-    margin-left: 120px;
+    margin-left: 7.5em;
 }
 
+
 .shopping-fee {
-    margin-left: 208px;
-    font-size: 18px;
+    font-size: 1.125rem;
+    margin-left: 11.5em;
     color: #767676;
 }
 
+
 .item-price {
-    margin-left: 180px;
+    font-size: 1.125rem;
+    margin-left: 10em;
     font-weight: bold;
-    font-size: 18px;
 }
 
+
 .total-price {
-    margin-top: 30px;
+    margin-top: 1.875em;
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
 }
 
+
 .total-price span:first-child {
-    font-size: 18px;
+    font-size: 1.125rem;
 }
+
 
 .total-price span:last-child {
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: bold;
     color: #EB5757;
-    margin-left: 10px;
+    margin-left: 0.41em;
 }
+
 
 .delivery-container {
-    margin: 96px 0 0 0;
+    margin: 6em 0 0 0;
 }
+
 
 .delivery-container h3, .payment-container h3 {
-    font-size: 24px;
-    margin: 0 0 18px 0;
+    font-size: 1.5rem;
+    margin: 0 0 0.75em 0;
 }
+
 
 .receiver {
-    margin-top: 40px;   
+    margin-top: 2.5em;
 }
 
+
 .receiver h4 {
-    font-size: 18px;  
-    margin-bottom: 8px;
+    font-size: 1.125rem;
+    margin-bottom: 0.44em;
 }
+
 
 .input-wrap, .phone-wrap, .delivery-wrap {
     display: flex;
@@ -118,9 +139,11 @@
     border-bottom: 1px solid #c4c4c4;
 }
 
+
 .input-wrap p, .phone-wrap p, .delivery-wrap p {
     width: 170px;
 }
+
 
 .input-wrap div, .phone-wrap div {
     width: 334px;
@@ -129,80 +152,95 @@
     align-items: center;
 }
 
+
 .input-wrap div input, 
 .phone-wrap div input, 
 .post-wrap input, 
 .message-wrap input {
     border: 1px solid #c4c4c4;
     height: 40px;
-    padding: 0 0 0 8px;
-    margin: 8px 0;
+    padding: 0 0 0 0.5em;
+    margin: 0.5em 0;
 }
+
 
 .input-wrap div input {
     width: 100%;
 }
 
+
 .phone-wrap div input {
     width: 80px;
 }
+
 
 .post-wrap, .message-wrap {
     width: 800px;
 }
 
+
 .post-wrap input {
     width: 170px;
-    margin-right: 10px;
+    margin-right: 0.625em;
 }
 
-.post-wrap .btn-post {
+
+.post-wrap .post {
     background-color: #21BF48;
     color: #fff;
     border-radius: 5px;
     border: 1px solid #21BF48;
     cursor: pointer;
-    padding: 10px 30px;
+    padding: 0.625em 1.875em;
 }
+
 
 .post-wrap div {
     display: flex;
     flex-direction: column;
 }
 
+
 .post-wrap div input, .message-wrap input {
     width: 100%;
 }
 
+
 .post-wrap div input:first-child {
-    margin: 0 0 8px 0;
+    margin: 0 0 0.5em 0;
 }
 
+
 .payment-container {
-    margin: 70px 0 120px;
+    margin: 4.375em 0 7.5em;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
+
 .method-wrap input, .method-wrap label {
     cursor: pointer;
 }
 
+
 .method-wrap input {
-    margin: 18px 10px;
+    margin: 1.125em 0.625em;
 }
 
+
 .method-wrap label {
-    margin: 0 10px 0 0;
+    margin: 0 0.625em 0 0;
 }
+
 
 .final-pay-container article {
     border: 2px solid #21BF48;
     border-radius: 10px;
-    padding-top: 32px;
+    padding-top: 2em;
     width: 480px;
 }
+
 
 .pay-wrap, .pay-price {
     display: flex;
@@ -211,41 +249,45 @@
     align-items: center;
 }
 
+
 .pay-wrap {
-    margin: 0 30px 15px;
+    margin: 0 1.875em 1em;
 }
 
+
 .pay-wrap span:last-child {
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: bold;
 }
+
 
 .pay-wrap span:last-child::after {
     content: '원';
     color: #767676;
-    font-size: 14px;
-    margin-left: 4px;
+    font-size: 0.875rem;
+    margin-left: 0.22em;
 }
 
+
 .pay-price {
-    margin: 0 30px 24px;
-    padding-top: 29px;
+    margin: 0 1.875em 1.5em;
+    padding-top: 1.875em;
     border-top: 1px solid #c4c4c4;
 }
 
+
 .pay-price span:last-child {
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: bold;
     color: #EB5757;
 }
 
 
-
-
 .area {
     background-color: #F2F2F2;
-    padding: 30px;
+    padding: 1.875em;
 }
+
 
 .check-area {
     display: flex;
@@ -253,9 +295,11 @@
     align-items: flex-start;
 }
 
+
 .check-area input {
-    margin-right: 10px;
+    margin-right: 0.625em;
 }
+
 
 .check-area input, .check-area label {
     cursor: pointer;
@@ -263,21 +307,23 @@
 
 
 .pay {
-    padding: 20px 64px;
+    font-size: 1.5rem;
+    padding: 0.83em 2.66em;
     color: #fff;
     background-color: #c4c4c4;
     border: none;
     border-radius: 5px;
     font-weight: bold;
-    font-size: 24px;
-    margin: 30px auto 0;
+    margin: 1.25em auto 0;
     cursor: pointer;
     display: block;
 }
 
+
 .pay-check {
     background-color: #21BF48;
 }
+
 
 .check-area .check {
     display: block;
