@@ -23,6 +23,7 @@ export const Nav = () => {
   
     return(
       <header className={styles.container}>
+        <div className={styles.inner}>
         <Link to='/'>
           <img src={Logo} alt={'로고 이미지'} className={styles.icon}/>
         </Link>
@@ -64,6 +65,7 @@ export const Nav = () => {
             </Link>
           </div>
           }
+        </div>
       </header>
     )
   }
