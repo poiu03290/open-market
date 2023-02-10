@@ -4,7 +4,7 @@ input[name="member-select"] {
 
 
 .logo {
-    margin: 100px 0 70px;
+    margin: 6.25em 0 4.375em;
 }
 
 
@@ -23,14 +23,14 @@ input[name="member-select"] {
 
 .tab-box .buyer, 
 .tab-box .seller {
+    font-size: 1.125rem;
     flex: 1;
     background-color: #C4C4C4;
     border: 1px solid #C4C4C4;
     border-radius: 10px 10px 0 0;
     cursor: pointer;
-    font-size: 18px;
     font-weight: 600;
-    padding: 20px 0 18px;
+    padding: 1.11em 0 1em;
     text-align: center;
 }
 
@@ -45,14 +45,14 @@ input[name="member-select"] {
 .input-box {
     display: flex;
     flex-direction: column;
-    padding: 35px 35px 0 35px;
+    padding: 2.25em 2.25em 0 2.25em;
     color: #767676;
 }
 
 
 .input-box input {
     width: 480px;
-    padding: 20px 0;
+    padding: 1.5em 0;
     border: none;
     border-bottom: 1px solid #C4C4C4; 
 }
@@ -64,13 +64,13 @@ input[name="member-select"] {
 
 
 .input-box .id {
-    margin-bottom: 6px;
+    margin-bottom: 0.375em;
 }
 
 
 .login {
     display: block;
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: 700;
     color: #fff;
     background-color: #21BF48;
@@ -78,13 +78,13 @@ input[name="member-select"] {
     border: none;
     margin: 0 auto;
     width: 480px; height: 60px;
-    margin-bottom: 36px;
+    margin-bottom: 2em;
     cursor: pointer;
 }
 
 
 .txt-box {
-    margin-top: 30px;
+    margin-top: 1.875em;
 }
 
 
@@ -96,11 +96,11 @@ input[name="member-select"] {
 
 .lnk::after {
     content: '|';
-    margin: 0 14px;
+    margin: 0 0.875em;
 }
 
 
 .warning {
-    margin: 10px 0 26px 0;
+    margin: 0.625em 0 1.625em 0;
     color: #EB5757;
 }
