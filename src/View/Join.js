@@ -33,11 +33,14 @@ export const Join = () => {
   const [infoCheck, setInfoCheck] = useState(false);
   const phoneList = ['010', '011', '016', '017', '019'];
 
+
   const [isOpen, setIsOpen] = useDetectClose(dropDownRef, false);
+
 
   useEffect(() => {
     setProfile({...profile, phone_number: phoneIdentify + phoneMidNum + phoneEndNum})
   }, [phoneIdentify, phoneMidNum, phoneEndNum])
+
 
   const DuplicateButtonClick = async () => {
     try {
@@ -49,6 +52,7 @@ export const Join = () => {
       setDuplicateCheck({...duplicateCheck, result: false, message: error.response.data.FAIL_Message})
     }
   }
+
 
   const isValidPassword = useMemo(() => {
     if(profile.password && profile.password.length >= 8) {
@@ -68,6 +72,7 @@ export const Join = () => {
         false
   }, [profile.password, profile.password2])
 
+
   const onUserGuessInput = useCallback((e) => {
     const maxLengthCheck = (e) => {
       if (e.target.value.length > e.target.maxLength) {
@@ -78,10 +83,12 @@ export const Join = () => {
     return maxLengthCheck(e)
   }, [])
 
+
   const isFillInput = useMemo(() => {
     return duplicateCheck.result && isValidPassword && isCorrectPassword.result && profile.name.length > 0 && infoCheck ?
     true : false
   }, [duplicateCheck, isValidPassword, isCorrectPassword, profile, infoCheck])
+
 
   const onJoinButtonClick = useCallback(async() => {
     try {
@@ -99,6 +106,7 @@ export const Join = () => {
 
   }, [profile, navigate])
 
+  
     return(
         <div className='flex-center'>
 

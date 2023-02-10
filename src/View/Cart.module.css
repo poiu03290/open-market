@@ -1,36 +1,36 @@
 .title {
     text-align: center;
     margin: 50px 0;
-    font-size: 36px;
+    font-size: 2.25rem;
 }
 
 .container {
-    padding: 0 320px;
+    padding: 0 20em;
 }
 
 .bar {
     background-color: #F2F2F2;
-    font-size: 18px;
+    font-size: 1.125rem;
     display: flex;
     flex-direction: row;
-    padding: 20px 0;
+    padding: 1.11em 0;
     border-radius: 10px;
 }
 
 .bar .info {
-    margin-left: 364px;
+    margin-left: 20.22em;
 }
 
 .bar .count {
-    margin-left: 379px;
+    margin-left: 21.05em;
 }
 
 .bar .price {
-    margin-left: 238px;
+    margin-left: 13.22em;
 }
 
 .product {
-    margin: 35px 0 80px;
+    margin: 2.25em 0 5em;
 }
 
 .product li {
@@ -39,26 +39,26 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding: 20px 0;
+    padding: 1.25em 0;
     position: relative;
 }
 
 .product li:not(:first-child) {
-    margin-top: 10px;
+    margin-top: 0.625em;
 }
 
 .product li label {
-    margin-left: 34px;
+    margin-left: 2.2125em;
 }
 
 .img {
     width: 160px; height: 160px;
-    margin-left: 40px;
+    margin-left: 2.5em;
     border-radius: 10px;
 }
 
 .p-info {
-    margin-left: 36px;
+    margin-left: 2.25em;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -74,37 +74,37 @@
 }
 
 .name {
-    font-size: 18px;
-    margin-top: 10px;
+    font-size: 1.125rem;
+    margin-top: 0.55em;
 }
 
 .b-price {
-    margin-top: 10px;
+    margin-top: 0.625em;
     font-weight: bold;
 }
 
 .shopping {
-    margin-top: 40px;
+    margin-top: 2.5em;
     color: #767676;
-    font-size: 14px;
+    font-size: 0.875rem;
 }
 
 .order {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-left: 148px;
+    margin-left: 9.25em;
 }
 
 .order span {
     color: #EB5757;
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: bold;
 }
 
 .order input {
-    padding: 10px 35px;
-    margin-top: 26px;
+    padding: 0.625em 2.25em;
+    margin-top: 1.625em;
     border: none;
     border-radius: 5px;
     background-color: #21BF48;
@@ -113,8 +113,8 @@
 }
 
 .p-count {
-    margin: 30px 0;
-    font-size: 18px;
+    font-size: 1.125rem;
+    margin: 1.66em 0;
     line-height: 23px;
     display: flex;
     flex-direction: row;
@@ -135,7 +135,7 @@
     background-color: inherit;
     width: 48px;
     height: 48px;
-    font-size: 32px;
+    font-size: 2rem;
     padding: 0;
 }
 
@@ -166,7 +166,7 @@
     flex-direction: row;
     align-items: center;
     border-radius: 10px;
-    padding: 42px 0;
+    padding: 2.625em 0;
 }
 
 .total span {
@@ -180,51 +180,51 @@
 }
 
 .total .t-price {
-    margin-left: 112px;
+    margin-left: 7em;
 }
 
 .total .t-bold {
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: bold;
-    margin-top: 12px;
+    margin-top: 0.5em;
 }
 
 .total .t-bold::after {
     content: '원';
-    font-size: 16px;
+    font-size: 1rem;
     display: inline-block;
-    margin-left: 2px;
+    margin-left: 0.125em;
+}
+
+.total .t-minus, .total .t-plus {
+    width: 34px; height: 34px;
+    border-radius: 50%;
+    margin: 0 6.25em;
 }
 
 .total .t-minus {
     background: #fff url('../assets/icon-minus-line.svg') no-repeat center;
-    width: 34px; height: 34px;
-    border-radius: 50%;
-    margin: 0 100px;
 }
 
 .total .t-plus {
     background: #fff url('../assets/icon-plus-line.svg') no-repeat center;
-    width: 34px; height: 34px;
-    border-radius: 50%;
-    margin: 0 100px;
 }
 
 .payment-box {
-    margin-left: 229px;
+    margin-left: 14.31em;
 }
 
 .payment-price {
-    font-size: 36px;
+    font-size: 2.25rem;
     color: #EB5757;
 }
 
 .button {
+    font-size: 1.5rem;
     display: block;
-    padding: 20px 66px;
+    padding: 0.83em 2.75em;
     color: #fff;
     background-color: #21BF48;
-    font-size: 24px;
     font-weight: bold;
     border: none;
     border-radius: 5px;
@@ -237,5 +237,5 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 180px 0;
+    padding: 11.25em 0;
 }
