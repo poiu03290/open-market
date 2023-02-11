@@ -1,17 +1,21 @@
+import { Link } from 'react-router-dom';
+
 import styles from './Modal.module.css';
 
 import closeImage from '../assets/icon-delete.svg';
 
 let content = null;
 
-function LoginModal({ setIsModal }) {
+function LoginModal({ setIsModal, isModal }) {
     return (
     <>
         <img src={closeImage} alt={'닫기 버튼'} onClick={() => setIsModal(false)}/>
         <h4>로그인이 필요한 서비스입니다.<br/>로그인 하시겠습니까?</h4>
         <div>
-            <input type='button' value='아니오'/>
-            <input type='button' value='예'/>
+            <input type='button' value='아니오' onClick={() => setIsModal(!isModal)}/>
+            <Link to={'/login'}>
+                <input type='button' value='예' />
+            </Link>
         </div>
     </>
     )
@@ -67,9 +71,9 @@ export const Modal = ({ MODE, setIsModal, isModal, cart, handlePlus, handleMinus
     } else if(MODE === 'DELETE') {
         content = <DeleteModal setIsModal={setIsModal} deleteItem={deleteItem}/>;
     } else if(MODE === 'ALERT') {
-        content = <AlertModal message={message} setIsModal={setIsModal}/>
+        content = <AlertModal message={message} setIsModal={setIsModal} />
     } else {
-        content = <LoginModal setIsModal={setIsModal} />;
+        content = <LoginModal setIsModal={setIsModal} isModal={isModal} />;
     }
 
 
