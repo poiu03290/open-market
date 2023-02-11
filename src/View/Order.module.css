@@ -6,27 +6,34 @@
 
 
 .container {
-    padding: 0 20em;
+    padding: 0 2em;
 }
 
 
-.bar .bar-info {
-    margin-left: 16.25em;
+.inner {
+    max-width: 1280px;
+    margin: 0 auto;
 }
 
 
-.bar .bar-count {
-    margin-left: 22.5em;
+.grid {
+    display: grid;
 }
 
 
-.bar .bar-delivery {
-    margin-left: 11.75em;
+.bar {
+    background-color: #F2F2F2;
+    font-size: 1.125rem;
+    padding: 1.11em 0;
+    border-radius: 10px;
+    
+    display: grid;
+    grid-template-columns: 2.75fr 1fr 1fr 1fr;
 }
 
 
-.bar .bar-price {
-    margin-left: 10.625em;
+.bar span {
+    text-align: center;
 }
 
 
@@ -34,6 +41,11 @@
     margin-top: 1em;
     padding: 0.5em 0 1.125em 0.5em;
     border-bottom: 2px solid #C4C4C4;
+    display: grid;
+    grid-template-columns: 2.75fr 1fr 1fr 1fr;
+}
+
+.info {
     display: flex;
     flex-direction: row;
 }
@@ -49,8 +61,8 @@
 .item-info {
     display: flex;
     flex-direction: column;
-    margin: 1.25em 0 0 2.25em;
-    width: 440px;
+    margin-left: 2.25em;
+
 }
 
 
@@ -70,21 +82,14 @@
 }
 
 
-.discount {
-    margin-left: 7.5em;
-}
-
-
 .shopping-fee {
     font-size: 1.125rem;
-    margin-left: 11.5em;
     color: #767676;
 }
 
 
 .item-price {
     font-size: 1.125rem;
-    margin-left: 10em;
     font-weight: bold;
 }
 
@@ -219,6 +224,11 @@
 }
 
 
+.method {
+    margin-right: 24px;
+}
+
+
 .method-wrap input, .method-wrap label {
     cursor: pointer;
 }
@@ -238,7 +248,6 @@
     border: 2px solid #21BF48;
     border-radius: 10px;
     padding-top: 2em;
-    width: 480px;
 }
 
 
@@ -329,3 +338,193 @@
     display: block;
 }
 
+@media screen and (max-width: 1023px) {
+    .container {
+        font-size: 0.875rem;
+    }
+
+
+    .title {
+        font-size: 2rem;
+    }
+    
+    
+    .bar {
+        font-size: 1rem;
+    }
+
+    
+    .item img {
+        width: 98px; height: 98px;
+    }
+    
+    
+    .item-name {
+        font-size: 1rem;
+    }
+    
+    
+    .item-quantity {
+        font-size: 0.75em;
+    }
+    
+    
+    .shopping-fee {
+        font-size: 1rem;
+    }
+    
+    
+    .item-price {
+        font-size: 1rem;
+    }
+    
+    
+    .total-price span:first-child {
+        font-size: 1rem;
+    }
+    
+    
+    .total-price span:last-child {
+        font-size: 1.25rem;
+    }
+    
+    
+    .delivery-container h3, .payment-container h3 {
+        font-size: 1.25rem;
+    }
+    
+    
+    .receiver h4 {
+        font-size: 1rem;
+    }
+    
+    
+    .input-wrap div input, 
+    .phone-wrap div input, 
+    .post-wrap input, 
+    .message-wrap input {
+        height: 36px;
+    }
+    
+    
+    .pay-wrap span:last-child {
+        font-size: 1rem;
+    }
+    
+    
+    .pay-wrap span:last-child::after {
+        font-size: 0.75rem;
+    }
+    
+    
+    .pay-price span:last-child {
+        font-size: 1.25rem;
+    }
+
+    
+    .pay {
+        font-size: 1.25rem;
+    }
+}
+
+
+@media screen and (max-width: 767px) {
+    .container {
+        font-size: 0.75rem;
+    }
+
+
+    .title {
+        font-size: 1.875rem;
+    }
+    
+    
+    .bar {
+        font-size: 0.875rem;
+    }
+
+    
+    .item img {
+        width: 92px; height: 92px;
+    }
+    
+    
+    .item-name {
+        font-size: 0.875rem;
+    }
+    
+    
+    .item-quantity {
+        font-size: 0.5em;
+    }
+    
+    
+    .shopping-fee {
+        font-size: 0.875rem;
+    }
+    
+    
+    .item-price {
+        font-size: 0.875rem;
+    }
+    
+    
+    .total-price span:first-child {
+        font-size: 0.875rem;
+    }
+    
+    
+    .total-price span:last-child {
+        font-size: 1rem;
+    }
+    
+    
+    .delivery-container h3, .payment-container h3 {
+        font-size: 1rem;
+    }
+    
+    
+    .receiver h4 {
+        font-size: 0.875rem;
+    }
+    
+    
+    .input-wrap div input, 
+    .phone-wrap div input, 
+    .post-wrap input, 
+    .message-wrap input {
+        height: 32px;
+    }
+
+    .post {
+        margin-bottom: 0.5em;
+    }
+
+    
+    .pay-wrap span:last-child {
+        font-size: 0.875rem;
+    }
+    
+    
+    .pay-wrap span:last-child::after {
+        font-size: 0.5rem;
+    }
+    
+    
+    .pay-price span:last-child {
+        font-size: 1rem;
+    }
+
+    
+    .pay {
+        font-size: 1rem;
+    }
+    
+    .payment-container {
+        flex-direction: column;
+    }
+
+    .method {
+        margin-bottom: 2em;
+    }
+}
