@@ -1,9 +1,10 @@
-import { useCallback, useRef } from 'react';
+import { useState, useCallback, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 
 import { removeToken } from '../modules/user';
 import useDetectClose from '../hooks/useDetectClose';
+import { Modal } from './Modal';
 import styles from './Nav.module.css';
 
 import Logo from '.././assets/Logo-hodu.png';
@@ -11,6 +12,8 @@ import Logo from '.././assets/Logo-hodu.png';
 export const Nav = () => {
   const dropDownRef = useRef();
   const dispatch = useDispatch();
+  const [modalMODE, setModalMODE] = useState('');
+  const [isModal, setIsModal] = useState(false);
 
   const [isOpen, setIsOpen] = useDetectClose(dropDownRef, false);
   const { user } = useSelector(state => state.user);
@@ -55,7 +58,7 @@ export const Nav = () => {
           </div> : 
           <div className={styles.sale}>
             <div className={styles['icon-box']}>
-              <input type="button" value="장바구니" onClick={() => alert('로그인을 해주세요.')} className={styles.cart}/>
+              <input type="button" value="장바구니" onClick={() => setIsModal(!isModal)} className={styles.cart}/>
             </div>
             
             <Link to={"/login"}>
@@ -66,6 +69,8 @@ export const Nav = () => {
           </div>
           }
         </div>
+        <Modal isModal={isModal} setIsModal={setIsModal} MODE={modalMODE} />
       </header>
+      
     )
   }
