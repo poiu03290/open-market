@@ -18,11 +18,13 @@ export const OrderItem = ({ orderInfo, orderData, setOrderData }) => {
     return (
         <>
             <li className={styles.item}>
-                <img src={orderInfo.image} alt={'주문한 이미지'}/>
-                <div className={styles['item-info']}>
-                    <span>{orderInfo.store_name}</span>
-                    <span className={styles['item-name']}>{orderInfo.product_name}</span>
-                    <span className={styles['item-quantity']}>수량 : {orderInfo.quantity}개</span>
+                <div className={styles.info}>
+                    <img src={orderInfo.image} alt={'주문한 이미지'}/>
+                    <div className={styles['item-info']}>
+                        <span>{orderInfo.store_name}</span>
+                        <span className={styles['item-name']}>{orderInfo.product_name}</span>
+                        <span className={styles['item-quantity']}>수량 : {orderInfo.quantity}개</span>
+                    </div>
                 </div>
                 <div className={`${styles.discount} flex-center`}>
                     -

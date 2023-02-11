@@ -109,68 +109,73 @@ export const Cart = () => {
         localStorage.removeItem('order')
         localStorage.setItem('cart-order', JSON.stringify(orderItems))
     }
-
     return(
         <>
         <div>
           <h2 className={styles.title}>장바구니</h2>  
           <div className={styles.container}>
-            <div className={styles.bar}>
-                <span className={styles.info}>상품정보</span>
-                <span className={styles.count}>수량</span>
-                <span className={styles.price}>상품금액</span>
-            </div>
-            {cartList.count >= 1 ? 
-            <>
-                <ul className={styles.product}>
-                    {cartList.results && cartList.results.map((value, index) => (
-                        <CartItem 
-                            key={index}
-                            cartInfo={value} 
-                            cart={cart}
-                            setCart={setCart}
-                            _id={_id}
-                            set_ID={set_ID}
-                            handleCheck={handleCheck}
-                            onToggleActive={onToggleActive}
-                            checkID={checkID}
-                            checkTotalPrice={checkTotalPrice}
-                            setIsModal={setIsModal} 
-                            setModalMODE={setModalMODE} 
-                        />
-                    ))}
-                </ul>
-                <div className={styles.total}>
-                    <div className={styles['t-price']}>
-                        <span>총 상품금액</span>
-                        <span className={styles['t-bold']}>{totalPrice.toLocaleString()}</span>
+            <div className={styles.inner}>
+                <div className={styles.grid}>
+                    <div className={styles.bar}>
+                        <span>상품정보</span>
+                        <span>수량</span>
+                        <span>상품금액</span>
                     </div>
-                    <div className={styles['t-minus']}></div>
-                    <div>
-                        <span>상품 할인</span>
-                        <span className={styles['t-bold']}>0</span>
+                    {cartList.count >= 1 ? 
+                        <ul className={styles.product}>
+                            {cartList.results && cartList.results.map((value, index) => (
+                                <CartItem 
+                                    key={index}
+                                    cartInfo={value} 
+                                    cart={cart}
+                                    setCart={setCart}
+                                    _id={_id}
+                                    set_ID={set_ID}
+                                    handleCheck={handleCheck}
+                                    onToggleActive={onToggleActive}
+                                    checkID={checkID}
+                                    checkTotalPrice={checkTotalPrice}
+                                    setIsModal={setIsModal} 
+                                    setModalMODE={setModalMODE} 
+                                />
+                            ))}
+                        </ul> 
+                        : 
+                        <div className={styles.empty}>
+                            <h2>장바구니에 담긴 상품이 없습니다.</h2>
+                            <p>원하는 상품을 장바구니에 담아보세요!</p>
+                        </div>
+                    }
                     </div>
-                    <div className={styles['t-plus']}></div>
-                    <div>
-                        <span>배송비</span>
-                        <span className={styles['t-bold']}>0</span>
-                    </div>
-                    <div className={styles['payment-box']}>
-                        <span style={{ fontWeight: 'bold' }}>결제 예정 금액</span>
-                        <span className={`${styles['payment-price']} ${styles['t-bold']}`}>{totalPrice.toLocaleString()}</span>
-                    </div>
+                    {cartList.count > 0 && 
+                    <>
+                        <div className={styles.total}>
+                            <div className={styles['t-price']}>
+                                <span>총 상품금액</span>
+                                <span className={styles['t-bold']}>{totalPrice.toLocaleString()}</span>
+                            </div>
+                            <div className={styles['t-minus']}></div>
+                            <div>
+                                <span>상품 할인</span>
+                                <span className={styles['t-bold']}>0</span>
+                            </div>
+                            <div className={styles['t-plus']}></div>
+                            <div>
+                                <span>배송비</span>
+                                <span className={styles['t-bold']}>0</span>
+                            </div>
+                            <div>
+                                <span style={{ fontWeight: 'bold' }}>결제 예정 금액</span>
+                                <span className={`${styles['payment-price']} ${styles['t-bold']}`}>{totalPrice.toLocaleString()}</span>
+                            </div>
+                        </div>
+                        <Link to={'/order'} onClick={orderButtonClick}>
+                            <input type='button' value='주문하기' className={styles.button} />
+                        </Link>
+                    </>
+                    }
                 </div>
-                <Link to={'/order'} onClick={orderButtonClick}>
-                    <input type='button' value='주문하기' className={styles.button} />
-                </Link>
-            </>
-            : 
-            <div className={styles.empty}>
-                <h2>장바구니에 담긴 상품이 없습니다.</h2>
-                <p>원하는 상품을 장바구니에 담아보세요!</p>
             </div>
-            }
-          </div>
         </div>
         {<Modal 
             isModal={isModal}

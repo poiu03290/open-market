@@ -38,6 +38,7 @@
 
 .container p {
     margin: 3.75em 2.25em 2em;
+    text-align: center;
 }
 
 
@@ -63,25 +64,23 @@
 .container div input {
     width: 100px; height: 40px;
     cursor: pointer;
+    font-size: 1rem;
+    border-radius: 5px;
 }
 
 
 .container div input:first-child {
     margin-right: 0.625em;
-    font-size: 1rem;
     border: 1px solid #c4c4c4;
     background-color: #fff;
     color: #767676;
-    border-radius: 5px;
 }
 
 
 .container div input:last-child {
-    font-size: 1rem;
     border: 1px solid #21BF48;
     background-color: #21BF48;
     color: #fff;
-    border-radius: 5px;
 }
 
 
@@ -126,4 +125,45 @@
     border: none;
     border-left: 1px solid #767676;
     background: #fff url('../assets/icon-plus-line.svg') no-repeat center;
+}
+
+@media screen and (max-width: 1023px) {
+    .container {
+        font-size: 0.875rem;
+        height: 192px;
+    }
+
+
+    .container div input {
+        font-size: 0.875rem;
+    }
+
+
+    .container article {
+        font-size: 1rem;
+        width: 128px;
+    }
+    
+    
+    .container article span {
+        width: 42px;
+    }
+    
+    
+    .container article input {
+        width: 42px;
+        height: 42px;
+        font-size: 1.875rem;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .container {
+        font-size: 0.75rem;
+        height: 180px;
+    }
+
+    .container div input {
+        font-size: 0.75rem;
+    }
 }

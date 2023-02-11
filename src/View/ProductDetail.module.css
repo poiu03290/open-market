@@ -20,7 +20,6 @@
 .info {
     width: 100%;
     margin-left: 3.125em;
-    /* overflow: hidden; */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -209,14 +208,20 @@
         font-size: 0.75rem;
     }
 
+    .detail-box {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
 
     .detail-box img {
-        width: 360px;
+        width: 320px;
     }
 
 
     .info {
-        margin-left: 2em;
+        margin-top: 2rem;
+        margin-left: 0;
     }
 
 
@@ -224,12 +229,13 @@
         font-size: 0.875rem;
     }
 
-
-    .total-price {
-        font-size: 0.75rem;
+        
+    .price-box {
+        flex-wrap: wrap;
     }
 
-    .price {
+
+    .total-price {
         font-size: 0.75rem;
     }
 

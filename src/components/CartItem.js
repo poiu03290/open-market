@@ -51,18 +51,21 @@ export const CartItem = ({
     return(
         <>
             <li>
-                <input 
-                    type='checkbox' 
-                    onChange={(e) => (
-                        handleCheck(e.target.checked, cartInfo.product_id), 
-                        onToggleActive(cartInfo.product_id),
-                        checkTotalPrice(e.target.checked, cartInfo, cartItem)
-                    )}
-                    checked={checkID.includes(cartInfo.product_id) ? true : false}
-                    id={cartInfo.product_id} 
-                    className="check"
-                    />
-                <label htmlFor={cartInfo.product_id}></label>
+                <div className={styles.check}>
+                    <input 
+                        type='checkbox' 
+                        onChange={(e) => (
+                            handleCheck(e.target.checked, cartInfo.product_id), 
+                            onToggleActive(cartInfo.product_id),
+                            checkTotalPrice(e.target.checked, cartInfo, cartItem)
+                        )}
+                        checked={checkID.includes(cartInfo.product_id) ? true : false}
+                        id={cartInfo.product_id} 
+                        className="check"
+                        />
+                    <label htmlFor={cartInfo.product_id}></label>
+                </div>
+                
                 <img src={cartItem.image} alt={'상품 이미지'} className={styles.img}/>
                 <div className={styles['p-info']}>
                     <span className={styles.store}>{cartItem.store_name}</span>
