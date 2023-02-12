@@ -51,7 +51,9 @@ export const Nav = () => {
               {isOpen && (
                 <ul className={styles.dropdown}>
                   <li value="마이페이지">마이페이지</li>
-                  <li value="로그아웃" onClick={() => dispatch(removeToken())}>로그아웃</li>
+                  <Link to='/'>
+                    <li value="로그아웃" onClick={() => dispatch(removeToken())}>로그아웃</li>
+                  </Link>
                 </ul>
               )}
             </div>

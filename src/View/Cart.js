@@ -30,12 +30,14 @@ export const Cart = () => {
         })();
     }, [cart, isModal])
 
+
     const handlePlus = () => {
         setCart({
             ...cart,
             quantity: cart.quantity + 1
         })
     }
+
 
     const handleMinus = () => {
         if (cart.quantity <= 1) return
@@ -44,6 +46,7 @@ export const Cart = () => {
             quantity: cart.quantity - 1
         })
     }
+
 
     const updateQuantity = useCallback(async() => {
         try {
@@ -56,6 +59,7 @@ export const Cart = () => {
             setCheckItems([])
         }
     }, [cart, _id])
+
 
     const deleteItem = useCallback(async() => {
         await deleteCartItem(`/cart/${_id}/`)
@@ -72,9 +76,11 @@ export const Cart = () => {
         }
     }
 
+
     const onToggleActive = (id) => {
         cartList.results.forEach((el) => el.product_id === id ? el.is_active = !el.is_active : undefined);
     }
+
 
     const checkTotalPrice = (checked, cartInfo, cartItem) => {
         let tempObj = {
@@ -99,16 +105,21 @@ export const Cart = () => {
         }
     }
 
-    const totalPrice = checkItems
-    .map(item => item.price * item.quantity)
-    .reduce((acc, price) => acc + price, 0)
 
-    const orderButtonClick = () => {
+    const totalPrice = checkItems
+        .map(item => item.price * item.quantity)
+        .reduce((acc, price) => acc + price, 0)
+
+
+    const orderButtonClick = (e) => {
+        if (checkID.length < 1) e.preventDefault();
+        
         const orderItems = [...checkItems]
 
         localStorage.removeItem('order')
         localStorage.setItem('cart-order', JSON.stringify(orderItems))
     }
+
     return(
         <>
         <div>
