@@ -64,20 +64,20 @@ function AlertModal({ setIsModal, message }) {
     )
 }
 
-export const Modal = ({ MODE, setIsModal, isModal, cart, handlePlus, handleMinus, updateQuantity, deleteItem, message }) => {
+export const Modal = ({ MODE, isModal, ...props }) => {
 
-    if(MODE === 'QUANTITY') {
-        content = <QuantityModal setIsModal={setIsModal} cart={cart} handlePlus={handlePlus} handleMinus={handleMinus} updateQuantity={updateQuantity}/>;
-    } else if(MODE === 'DELETE') {
-        content = <DeleteModal setIsModal={setIsModal} deleteItem={deleteItem}/>;
-    } else if(MODE === 'ALERT') {
-        content = <AlertModal message={message} setIsModal={setIsModal} />
+    if (MODE === 'QUANTITY') {
+        content = <QuantityModal {...props} />;
+    } else if (MODE === 'DELETE') {
+        content = <DeleteModal {...props}/>;
+    } else if (MODE === 'ALERT') {
+        content = <AlertModal {...props} />
     } else {
-        content = <LoginModal setIsModal={setIsModal} isModal={isModal} />;
+        content = <LoginModal {...props} isModal={isModal} />;
     }
 
 
-    return(
+    return (
         <div className={isModal ? `${styles.modal} ${styles.open}` : `${styles.modal}`}>
             <div className={isModal ? `${styles.container}` : 'none'} >
                 {content}
