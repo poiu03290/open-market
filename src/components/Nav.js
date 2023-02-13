@@ -71,7 +71,7 @@ export const Nav = () => {
           </div>
           }
         </div>
-        <Modal isModal={isModal} setIsModal={setIsModal} MODE={modalMODE} />
+        <Modal isModal={isModal} setIsModal={setIsModal} MODE={modalMODE} setModalMODE={setModalMODE} />
       </header>
       
     )

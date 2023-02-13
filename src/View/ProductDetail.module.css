@@ -150,6 +150,7 @@
 .cart {
     padding: 1.11em 3.55em;
     background-color: #767676;
+    width: 100%;
 }
 
 @media screen and (max-width: 1023px) {
