@@ -21,8 +21,7 @@ input[name="member-select"] {
 }
 
 
-.tab-box .buyer, 
-.tab-box .seller {
+.tab-box .tab {
     font-size: 1.125rem;
     flex: 1;
     background-color: #C4C4C4;
@@ -35,8 +34,7 @@ input[name="member-select"] {
 }
 
 
-.tab-box input:checked + .seller, 
-.tab-box input:checked + .buyer {
+.tab-box .check {
     background-color: #fff;
     border-width: 1px 1px 0 1px;
 }

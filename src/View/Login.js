@@ -36,7 +36,7 @@ export const Login = () => {
         }
       }
     }
-
+    
     return(
         <div className='flex-center'>
           <Link to='/'>
@@ -45,9 +45,19 @@ export const Login = () => {
           <div className={styles.container}>
             <div className={styles['tab-box']}>
               <input type='radio' id='select-buyer' name='member-select' checked readOnly />
-              <label htmlFor='select-buyer' className={styles.buyer}>구매회원 로그인</label>
+              <label 
+                htmlFor='select-buyer' 
+                onClick={() => setProfile({...profile, login_type: 'BUYER'})} 
+                className={profile.login_type === 'BUYER' ? `${styles.tab} ${styles.check}` : `${styles.tab}`}>
+                구매회원 로그인
+              </label>
               <input type='radio' name='member-select' id='select-seller'/>
-              <label htmlFor='select-seller' className={styles.seller}>판매회원 로그인</label>
+              <label 
+                htmlFor='select-seller' 
+                onClick={() => setProfile({...profile, login_type: 'SELLER'})} 
+                className={profile.login_type === 'SELLER' ? `${styles.tab} ${styles.check}` : `${styles.tab}`}>
+                  판매회원 로그인
+              </label>
             </div>
             <div>
               <div className={styles['input-box']}>

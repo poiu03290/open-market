@@ -1,21 +1,17 @@
-import { useState, useCallback, useRef } from 'react';
+import { useState, useCallback } from 'react';
 import { Link } from 'react-router-dom';
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 
-import { removeToken } from '../modules/user';
-import useDetectClose from '../hooks/useDetectClose';
 import { Modal } from './Modal';
+import { SellerNav, BuyerNav } from './NavContents';
 import styles from './Nav.module.css';
 
 import Logo from '.././assets/Logo-hodu.png';
 
 export const Nav = () => {
-  const dropDownRef = useRef();
-  const dispatch = useDispatch();
   const [modalMODE, setModalMODE] = useState('');
   const [isModal, setIsModal] = useState(false);
 
-  const [isOpen, setIsOpen] = useDetectClose(dropDownRef, false);
   const { user } = useSelector(state => state.user);
 
   const getSearchProducts = useCallback((e) => {
@@ -38,25 +34,10 @@ export const Nav = () => {
         />
           {user.token ? 
           <div className={styles.purchase}>
-            <Link to='/cart'>
-              <div className={styles['icon-box']}>
-                  <input type="button" value="장바구니" className={styles.cart}/>
-              </div>
-            </Link>
-
-            <div ref={dropDownRef} className={styles['dropdown-box']}> 
-              <button onClick={(e) => setIsOpen(e)} id={'btn-mypage-click'} className={styles.mypage}>
-                마이페이지
-              </button>
-              {isOpen && (
-                <ul className={styles.dropdown}>
-                  <li value="마이페이지">마이페이지</li>
-                  <Link to='/'>
-                    <li value="로그아웃" onClick={() => dispatch(removeToken())}>로그아웃</li>
-                  </Link>
-                </ul>
-              )}
-            </div>
+            {user.user_type === "BUYER" ?
+              <BuyerNav /> :
+              <SellerNav />
+            }
           </div> : 
           <div className={styles.sale}>
             <div className={styles['icon-box']}>

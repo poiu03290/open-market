@@ -44,6 +44,7 @@
     width: 60px; height: 50px;
 }
 
+
 .mypage, .cart {
     padding: 3em 0 0 0; margin: 0;
     font-size: 0.75rem;
@@ -72,7 +73,7 @@
 }
 
 
-.btn-sale-center {
+.seller-center {
     width: 168px;
     height: 54px;
     color: #fff;
@@ -82,7 +83,7 @@
     border-radius: 5px;
     font-size: 1.125rem;
     padding: 0.88em 1.11em 0.88em 3.33em;
-    margin-left: 0.55em;
+    margin-right: 7.5em;
 }
 
 
@@ -125,6 +126,7 @@
     outline: 1px solid #767676;
     border-radius: 5px;
 }
+
 
 @media screen and (max-width: 1023px) {
     .search {

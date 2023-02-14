@@ -11,13 +11,13 @@ export const ProductDetail = () => {
     const { productId } = useParams();
 
     const [productDetail, setProductDetail] = useState({});
-    const [message, setMessage] = useState('');
     const [count, setCount] = useState(1)
     const [cart, setCart] = useState({
         product_id: '',
         quantity: null,
         check: null,
     })
+    const [message, setMessage] = useState('');
     const [modalMODE, setModalMODE] = useState('');
     const [isModal, setIsModal] = useState(false);
 
