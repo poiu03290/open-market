@@ -65,3 +65,15 @@ export const OrderAPI = async (url, data) => {
 
     return response
 }
+
+export const sellerValidate = async (url, data) => {
+    const response = await apiRequest.post(url, data)
+
+    return response
+}
+
+export const sellerJoin = async (url, data) => {
+    const response = await apiRequest.post(url, data)
+
+    return response
+}

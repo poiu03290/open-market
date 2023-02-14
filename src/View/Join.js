@@ -1,8 +1,7 @@
 import { useState, useRef, useMemo, useCallback, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 
-import { DuplicateCheckAPI } from '../api/api';
-import { JoinAPI } from '../api/api';
+import { DuplicateCheckAPI, JoinAPI, sellerValidate, sellerJoin } from '../api/api';
 import styles from './Join.module.css'
 
 import useDetectClose from '../hooks/useDetectClose';
@@ -21,12 +20,10 @@ export const Join = () => {
     phone_number: '',
     name: '',
   });
-
-  const [duplicateCheck, setDuplicateCheck] = useState({
-    result: null,
-    message: '',
-  });
-  const [joinErrorMessage, setJoinErrorMessage] = useState({})
+  const [joinType, setJoinType] = useState('BUYER');
+  const [duplicateCheck, setDuplicateCheck] = useState({});
+  const [registrateCheck, setRegistrateCheck] = useState({});
+  const [joinErrorMessage, setJoinErrorMessage] = useState({});
   const [phoneIdentify, setPhoneIdentify] = useState('');
   const [phoneMidNum, setPhoneMidNum] = useState('');
   const [phoneEndNum, setPhoneEndNum] = useState('');
@@ -92,7 +89,11 @@ export const Join = () => {
 
   const onJoinButtonClick = useCallback(async() => {
     try {
-      await JoinAPI('/accounts/signup/', profile)
+      if (joinType === 'buyer') {
+        await JoinAPI(' /accounts/signup/', profile)
+      } else {
+        await sellerJoin('/accounts/signup_seller/', profile)
+      }
 
       navigate('/login')
     } catch (error) {
@@ -106,7 +107,18 @@ export const Join = () => {
 
   }, [profile, navigate])
 
-  
+  const IsCheckRegistrationNumber = useCallback(async() => {
+    try {
+      const { data } = await sellerValidate('/accounts/signup/valid/company_registration_number/', profile)
+
+      setRegistrateCheck({...registrateCheck, result: true, message: data.Success})
+
+    } catch (error) {
+      setRegistrateCheck({...registrateCheck, result: false, message: error.response.data.FAIL_Message})
+
+    }
+  }, [profile, registrateCheck])
+
     return(
         <div className='flex-center'>
           <Link to='/'>
@@ -115,10 +127,10 @@ export const Join = () => {
 
           <div className={styles.container}>
             <div className={styles['tab-box']}>
-              <input type='radio' id='select-buyer' name='member-select' checked readOnly />
-              <label htmlFor='select-buyer' className={styles.buyer}>구매회원가입</label>
-              <input type='radio' name='member-select' id='select-seller'/>
-              <label htmlFor='select-seller' className={styles.seller}>판매회원가입</label>
+              <input type='radio' id='select-buyer' onClick={() => setJoinType('BUYER')} name='member-select' checked readOnly />
+              <label htmlFor='select-buyer' className={joinType === 'BUYER' ? `${styles.tab} ${styles.check}` : `${styles.tab}`}>구매회원가입</label>
+              <input type='radio' name='member-select' onClick={() => setJoinType('SELLER')} id='select-seller'/>
+              <label htmlFor='select-seller' className={joinType === 'SELLER' ? `${styles.tab} ${styles.check}` : `${styles.tab}`}>판매회원가입</label>
             </div>
             <div className={styles.box}>
 
@@ -129,8 +141,9 @@ export const Join = () => {
                     type='text' 
                     value={profile.username}
                     onChange={(e) => setProfile({...profile, username: e.target.value})}
-                    error={duplicateCheck.message.length > 0 ? duplicateCheck : undefined}
+                    error={duplicateCheck.message ? duplicateCheck : undefined}
                     validation={joinErrorMessage.username}
+                    id={'join-id-input'}
                   />
                   <button 
                     onClick={DuplicateButtonClick} 
@@ -146,7 +159,8 @@ export const Join = () => {
                   error={isValidPassword}
                   validation={joinErrorMessage.password}
                   className={isValidPassword ? styles.proper : styles['pw-input']}
-                  />
+                  id={'join-pw-input'}
+                />
                 <label htmlFor='join-repw-input'>비밀번호 재확인</label>
                 <ValidationForm 
                   type='password' 
@@ -155,7 +169,8 @@ export const Join = () => {
                   error={isCorrectPassword}
                   validation={joinErrorMessage.password2}
                   className={isCorrectPassword ? styles.proper : styles['repw-input']}
-                  />
+                  id={'join-repw-input'}
+                />
               </div>
               
               <div className={styles['info-box']}>
@@ -197,12 +212,42 @@ export const Join = () => {
                   </ul>
                   }
                 </div>
-                <label htmlFor='join-id-input'>이메일</label>
+                <label htmlFor='join-email-input'>이메일</label>
                 <div className={styles['email-box']}>
-                  <input type='text' />
+                  <input type='text' id={'join-email-input'}/>
                   <span>@</span>
                   <input type='text' />
                 </div>
+
+                {/* 판매자 */}
+                {joinType === 'seller' && 
+                <>
+                  <label htmlFor='join-buisness-input'>사업자 등록번호</label>
+                  <div className={`${styles['id-box']}`}>
+                    <ValidationForm 
+                      type='text' 
+                      value={profile.company_registration_number || ""}
+                      onChange={(e) => setProfile({...profile, company_registration_number: e.target.value})}
+                      error={registrateCheck.message ? registrateCheck : undefined}
+                      id={'join-buisness-input'}
+                      maxLength={10}
+                    />
+                    <button 
+                      onClick={IsCheckRegistrationNumber} 
+                      className={styles.valid}>
+                        인증
+                    </button>
+                  </div>
+                  <label htmlFor='join-store-input'>스토어 이름</label>
+                  <ValidationForm 
+                    type='text' 
+                    value={profile.store_name || ""}
+                    onChange={(e) => setProfile({...profile, store_name: e.target.value})}
+                    validation={joinErrorMessage.name}
+                    id={'join-store-input'}
+                    />
+                </>
+                }
               </div>
             </div>
 
@@ -222,6 +267,7 @@ export const Join = () => {
             <button
               onClick={onJoinButtonClick}
               className={isFillInput ? styles['join-valid'] : styles.join}
+              disabled={isFillInput ? false : true}
             >가입하기</button>
           </div>
           

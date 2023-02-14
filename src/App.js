@@ -1,12 +1,14 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 import { MainLayOut } from './components/MainLayOut';
+import { SellerLayOut } from './components/SellerLayOut';
 import { Main } from './view/Main';
 import { Login } from './view/Login';
 import { Join } from './view/Join';
 import { ProductDetail } from './view/ProductDetail';
 import { Cart } from './view/Cart';
 import { Order } from './view/Order';
+import { SellerCenter } from './view/SellerCenter';
 
 import './App.css';
 
@@ -23,6 +25,9 @@ function App() {
           </Route>
           <Route path='/login' element={<Login />}></Route>
           <Route path='/join' element={<Join />}></Route>
+          <Route element={<SellerLayOut />}>
+            <Route path='/seller_center' element={<SellerCenter />}></Route>
+          </Route>
         </Routes>
       </BrowserRouter>
     </div>
