@@ -85,7 +85,7 @@ export const Order = () => {
     return (
         <>
             <div>
-                <h2 className={styles.title}>주문/결제하기</h2>  
+                <h2 className={styles.title}>주문/결제하기</h2>
                 <div className={styles.container}>
                     <div className={styles.inner}>
                         <div className={styles.grid}>

@@ -77,3 +77,9 @@ export const sellerJoin = async (url, data) => {
 
     return response
 }
+
+export const getSellerProduct = async (url) => {
+    const response = await apiRequest.get(url)
+
+    return response
+}
