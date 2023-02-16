@@ -25,7 +25,7 @@ const ValidationForm = ({
 
         else if (validation) {
             setErrorMessage(validation)
-            return
+            return false
         }
 
     }, [error, errorMessage, validation])

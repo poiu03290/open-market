@@ -1,13 +1,11 @@
 import { Outlet } from "react-router-dom";
-import { Nav } from "./Nav";
-import { Footer } from "./Footer";
+import { SellerCenterNav } from "./SellerCenterNav";
 
 export const SellerLayOut = () => {
     return(
         <>
-            <Nav />
+            <SellerCenterNav />
             <Outlet />
-            <Footer />
         </>
     )
 }

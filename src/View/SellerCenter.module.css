@@ -1,0 +1,151 @@
+.container {
+    padding: 44px 100px;
+}
+
+
+.subject {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+
+.subject h1 {
+    font-size: 36px;
+}
+
+
+.upload {
+    width: 168px;
+    height: 54px;
+    color: #fff;
+    border: none;
+    background: #21BF48 url('../assets/icon-plus.svg') no-repeat 24px center / 29px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1.125rem;
+    padding: 0.88em 1.11em 0.88em 3.33em;
+}
+
+
+.dashboard {
+    display: flex;
+    flex-direction: row;
+}
+
+
+.category {
+    margin-right: 30px;
+}
+
+
+.category li {
+    padding: 15px 117px 15px 20px;
+    border-radius: 5px; 
+    margin-bottom: 10px;
+}
+
+
+.category li:hover {
+    background: #EFFFF3;
+    cursor: pointer;
+}
+
+
+.click {
+    background-color: #21BF48;
+    color: #fff;
+}
+
+
+.grid {
+    border: 1px solid #C4C4C4;
+    border-radius: 5px;
+    width: 84%;
+}
+
+
+.bar {
+    border-bottom: 1px solid #C4C4C4;
+    font-size: 1.125rem;
+    padding: 1.11em 0;
+    
+    display: grid;
+    grid-template-columns: 2.75fr 1fr 0.5fr 0.5fr;
+}
+
+
+.bar span {
+    text-align: center;
+}
+
+
+.item {
+    display: grid;
+    grid-template-columns: 2.75fr 1fr 0.5fr 0.5fr;
+    border-bottom: 1px solid #C4C4C4;
+    align-items: center;
+    padding: 16px 0;
+
+}
+
+.item div:not(:first-child) {
+    margin: 0 auto;
+}
+
+
+.info {
+    display: flex;
+    flex-direction: row;
+    margin-left: 30px;
+    align-items: center;
+}
+
+
+.img {
+    width: 70px; height: 70px;
+    border-radius: 50%;   
+    margin-right: 30px;
+}
+
+.info article p {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+
+.info article span {
+    color: #767676;
+}
+
+.price {
+    font-size: 18px;
+}
+
+
+.update, .delete {
+    font-size: 16px;
+    border-radius: 5px;
+    padding: 10px 25px;
+    cursor: pointer;
+}
+
+
+.update {
+    border: none;
+    background-color: #21BF48;
+    color: #fff;
+}
+
+
+.delete {
+    border: 1px solid #c4c4c4;
+    background-color: #fff;
+    color: #767676;
+}
+
+.delete:hover {
+    border: 1px solid #767676;
+    color: #000000;
+}
