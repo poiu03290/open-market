@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 import { getSellerProduct } from '../api/api';
 
@@ -22,6 +23,7 @@ export const SellerCenter = () => {
             const { data } = await getSellerProduct('/seller/')
 
             setProductList(data);
+            console.log(data)
         })()
     }, [])
 
@@ -29,7 +31,9 @@ export const SellerCenter = () => {
         <div className={styles.container}>
             <div className={styles.subject}>
                 <h1>대시보드</h1>
-                <input type="button" value={"상품 업로드"} className={styles.upload} />
+                <Link to='/Product_registration'>
+                    <input type="button" value={"상품 업로드"} className={styles.upload} />
+                </Link>
             </div>
             <div className={styles.dashboard}>
                 <ul className={styles.category}>
@@ -55,44 +59,26 @@ export const SellerCenter = () => {
                                 
                             </li>
                         ))} */}
-                        <li className={styles.item}>
-                            <div className={styles.info}>
-                                <img src={logo} alt={'테스트'} className={styles.img}/>
-                                <article>
-                                    <p>딥러닝 개발자 무릎 담요</p>
-                                    <span>재고: 370개</span>
-                                </article>
-                            </div>
-                            <div className={styles.price}>
-                                17,500원
-                            </div>
-                            <div>
-                                <input type='button' value={'수정'} className={styles.update}/>
-                            </div>
-                            <div>
-                                <input type='button' value={'삭제'} className={styles.delete}/>
-                            </div>
-                        </li>
-
-                        <li className={styles.item}>
-                            <div className={styles.info}>
-                                <img src={logo} alt={'테스트'} className={styles.img}/>
-                                <article>
-                                    <p>딥러닝 개발자 무릎 담요</p>
-                                    <span>재고: 370개</span>
-                                </article>
-                            </div>
-                            <div className={styles.price}>
-                                17,500원
-                            </div>
-                            <div>
-                                <input type='button' value={'수정'} className={styles.update}/>
-                            </div>
-                            <div>
-                                <input type='button' value={'삭제'} className={styles.delete}/>
-                            </div>
-                        </li>
-                        
+                        <Link to=''>
+                            <li className={styles.item}>
+                                <div className={styles.info}>
+                                    <img src={logo} alt={'테스트'} className={styles.img}/>
+                                    <article>
+                                        <p>딥러닝 개발자 무릎 담요</p>
+                                        <span>재고: 370개</span>
+                                    </article>
+                                </div>
+                                <div className={styles.price}>
+                                    17,500원
+                                </div>
+                                <div>
+                                    <input type='button' value={'수정'} className={styles.update}/>
+                                </div>
+                                <div>
+                                    <input type='button' value={'삭제'} className={styles.delete}/>
+                                </div>
+                            </li>
+                        </Link>
                     </ul>
                 </div>
             </div>
