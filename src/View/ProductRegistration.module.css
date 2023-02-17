@@ -1,0 +1,43 @@
+.container {
+    padding: 44px 100px;
+}
+
+
+.subject {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+
+.subject h1 {
+    font-size: 36px;
+}
+
+.view {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+
+.info {
+    display: flex;
+    flex-direction: row;
+}
+
+
+.imgwrap > p {
+    color: #767676;
+
+}
+
+.imgwrap > div {
+    width: 454px; height: 454px;
+    background-color: #c4c4c4;
+    margin-right: 40px;
+}
+.test {
+    width: 826px;
+}
