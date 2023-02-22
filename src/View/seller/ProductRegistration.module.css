@@ -65,7 +65,7 @@
     display: inline-block;
     border: none;
     border-radius: 50%;
-    background: #767676 url('../assets/icon-img.png') no-repeat 50%;
+    background: #767676 url('../../assets/icon-img.png') no-repeat 50%;
     cursor: pointer;
 }
 

@@ -1,8 +1,8 @@
 import { useState, useEffect, useCallback } from 'react';
 
-import { OrderAPI } from '../api/api';
+import { OrderAPI } from '../../api/api';
 
-import { OrderItem } from '../components/OrderItem';
+import { OrderItem } from '../../components/OrderItem';
 import styles from './Order.module.css';
 
 export const Order = () => {

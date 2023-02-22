@@ -1,11 +1,11 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
-import { getSellerProduct } from '../api/api';
+import { getSellerProduct } from '../../api/api';
 
 import styles from './SellerCenter.module.css';
 
-import logo from '../assets/Logo-hodu.png';
+import logo from '../../assets/Logo-hodu.png';
 
 export const SellerCenter = () => {
     const [click, setClick] = useState([]);
@@ -54,17 +54,12 @@ export const SellerCenter = () => {
                         <span className={styles['bar-price']}>삭제</span>
                     </div>
                     <ul>
-                        {/* {productList && productList.map((value, index) => (
-                            <li key={index}>
-                                
-                            </li>
-                        ))} */}
                         <Link to=''>
                             <li className={styles.item}>
                                 <div className={styles.info}>
                                     <img src={logo} alt={'테스트'} className={styles.img}/>
                                     <article>
-                                        <p>딥러닝 개발자 무릎 담요</p>
+                                        <p>등록한 상품 1</p>
                                         <span>재고: 370개</span>
                                     </article>
                                 </div>

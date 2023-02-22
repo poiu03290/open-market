@@ -21,7 +21,7 @@
     height: 54px;
     color: #fff;
     border: none;
-    background: #21BF48 url('../assets/icon-plus.svg') no-repeat 24px center / 29px;
+    background: #21BF48 url('../../assets/icon-plus.svg') no-repeat 24px center / 29px;
     cursor: pointer;
     border-radius: 5px;
     font-size: 1.125rem;

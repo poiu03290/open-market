@@ -1,14 +1,14 @@
 import { useState, useRef, useMemo, useCallback, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 
-import { DuplicateCheckAPI, JoinAPI, sellerValidate, sellerJoin } from '../api/api';
+import { DuplicateCheckAPI, JoinAPI, sellerValidate, sellerJoin } from '../../api/api';
 import styles from './Join.module.css'
 
-import useDetectClose from '../hooks/useDetectClose';
-import ValidationForm from '../components/ValidationForm';
-import { PhoneDropDown } from '../components/PhoneDropDown';
+import useDetectClose from '../../hooks/useDetectClose';
+import ValidationForm from '../../components/ValidationForm';
+import { PhoneDropDown } from '../../components/PhoneDropDown';
 
-import Logo from '.././assets/Logo-hodu.png'
+import Logo from '../../assets/Logo-hodu.png'
 
 export const Join = () => {
   const navigate = useNavigate();
@@ -220,7 +220,7 @@ export const Join = () => {
                 </div>
 
                 {/* 판매자 */}
-                {joinType === 'seller' && 
+                {joinType === 'SELLER' && 
                 <>
                   <label htmlFor='join-buisness-input'>사업자 등록번호</label>
                   <div className={`${styles['id-box']}`}>

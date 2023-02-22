@@ -173,14 +173,14 @@
 .minus {
     border: none;
     border-right: 1px solid #767676;
-    background: #fff url('../assets/icon-minus-line.svg') no-repeat center;
+    background: #fff url('../../assets/icon-minus-line.svg') no-repeat center;
 }
 
 
 .plus {
     border: none;
     border-left: 1px solid #767676;
-    background: #fff url('../assets/icon-plus-line.svg') no-repeat center;
+    background: #fff url('../../assets/icon-plus-line.svg') no-repeat center;
 }
 
 
@@ -188,7 +188,7 @@
     width: 20px; height: 20px;
     position: absolute;
     top: 22px; right: 21px;
-    background: #fff url('../assets/icon-delete.svg') no-repeat center;
+    background: #fff url('../../assets/icon-delete.svg') no-repeat center;
     cursor: pointer;
     border: none;
 }
@@ -244,12 +244,12 @@
 
 
 .total .t-minus {
-    background: #fff url('../assets/icon-minus-line.svg') no-repeat center;
+    background: #fff url('../../assets/icon-minus-line.svg') no-repeat center;
 }
 
 
 .total .t-plus {
-    background: #fff url('../assets/icon-plus-line.svg') no-repeat center;
+    background: #fff url('../../assets/icon-plus-line.svg') no-repeat center;
 }
 
 

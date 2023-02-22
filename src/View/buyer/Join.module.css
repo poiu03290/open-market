@@ -57,16 +57,12 @@
     text-align: center;
 }
 
+
 .tab-box .check {
     background-color: #fff;
     border-width: 1px 1px 0 1px;
 }
 
-/* .tab-box input:checked + .seller, 
-.tab-box input:checked + .buyer {
-    background-color: #fff;
-    border-width: 1px 1px 0 1px;
-} */
 
 
 .id-box {
@@ -108,12 +104,12 @@
 
 
 .pw-input, .repw-input {
-    background: #fff url('../assets/icon-check-off.svg') no-repeat 96% center;
+    background: #fff url('../../assets/icon-check-off.svg') no-repeat 96% center;
 }
 
 
 .proper {
-    background: #fff url('../assets/icon-check-on.svg') no-repeat 96% center;
+    background: #fff url('../../assets/icon-check-on.svg') no-repeat 96% center;
 }
 
 
@@ -151,7 +147,7 @@
 
 
 .dropdown {
-    background: #fff url('../assets/icon-down-arrow.svg') no-repeat 90% center;
+    background: #fff url('../../assets/icon-down-arrow.svg') no-repeat 90% center;
     cursor: pointer;
 }
 

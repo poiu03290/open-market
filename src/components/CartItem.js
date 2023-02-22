@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 import { getProductDetail } from "../api/api"
-import styles from '../view/Cart.module.css';
+import styles from '../view/buyer/Cart.module.css';
 
 export const CartItem = ({ 
     cartInfo, 
