@@ -31,7 +31,7 @@ export const SellerCenter = () => {
         <div className={styles.container}>
             <div className={styles.subject}>
                 <h1>대시보드</h1>
-                <Link to='/Product_registration'>
+                <Link to='/product_registration'>
                     <input type="button" value={"상품 업로드"} className={styles.upload} />
                 </Link>
             </div>

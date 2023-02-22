@@ -28,7 +28,7 @@ function App() {
           <Route path='/join' element={<Join />}></Route>
           <Route element={<SellerLayOut />}>
             <Route path='/seller_center' element={<SellerCenter />}></Route>
-            <Route path='/Product_registration' element={<ProductRegistration />}></Route>
+            <Route path='/product_registration' element={<ProductRegistration />}></Route>
           </Route>
         </Routes>
       </BrowserRouter>
