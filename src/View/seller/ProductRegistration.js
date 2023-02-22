@@ -1,13 +1,10 @@
 import { useState, useRef, useCallback, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
-import axios from 'axios';
-
-import { uploadProduct } from '../api/api';
-import { uploadImage } from '../api/api';
+import { uploadProduct } from '../../api/api';
 
 import styles from './ProductRegistration.module.css';
-import basicImage from '../assets/Polygon_4.png'
+import basicImage from '../../assets/Polygon_4.png'
 
 export const ProductRegistration = () => {
     const ref = useRef();
@@ -16,20 +13,16 @@ export const ProductRegistration = () => {
     const [product, setProduct] = useState({
         image: "", 
         shipping_method: "",
-        products_info: ""
+        product_info: "상품 정보입니다."
     })
 
-    const imageUpload = async (e) => {
-        const file = e.target.files[0];
+    const imageUpload = async () => {
+        const file = ref.current.files[0];
         const reader = new FileReader();
         reader.readAsDataURL(file);
         reader.onloadend = () => {
             setImgFile(reader.result);
         }
-
-        const formData = new FormData();
-        formData.append("image", file)
-        console.log(formData)
     }
 
     const imageUploadButtonClick = () => {
@@ -58,9 +51,8 @@ export const ProductRegistration = () => {
     const saveButtonClick = useCallback(async() => {
         try {
             console.log(product)
-            const { data } = await uploadProduct('/products/', product)
+            await uploadProduct('/products/', product)
 
-            console.log(data)
         } catch (err) {
             console.log(err)
         }
@@ -88,7 +80,7 @@ export const ProductRegistration = () => {
                             accept='image/*'
                             id='image'
                             ref={ref}
-                            onChange={(e) => imageUpload(e)}
+                            onChange={imageUpload}
                         />
                     </div>
                     <div className={styles['product-info']}>

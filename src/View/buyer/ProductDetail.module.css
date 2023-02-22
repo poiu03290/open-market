@@ -70,14 +70,14 @@
 .minus {
     border: none;
     border-right: 1px solid #767676;
-    background: #fff url('../assets/icon-minus-line.svg') no-repeat center;
+    background: #fff url('../../assets/icon-minus-line.svg') no-repeat center;
 }
 
 
 .plus {
     border: none;
     border-left: 1px solid #767676;
-    background: #fff url('../assets/icon-plus-line.svg') no-repeat center;
+    background: #fff url('../../assets/icon-plus-line.svg') no-repeat center;
 }
 
 

@@ -1,11 +1,11 @@
 import { useState, useEffect } from 'react';
 import { useParams, Link } from "react-router-dom";
 
-import { getProductDetail } from '../api/api';
-import { putInCartList } from '../api/api';
+import { getProductDetail } from '../../api/api';
+import { putInCartList } from '../../api/api';
 import styles from './ProductDetail.module.css';
 
-import { Modal } from '../components/Modal';
+import { Modal } from '../../components/Modal';
 
 export const ProductDetail = () => {
     const { productId } = useParams();

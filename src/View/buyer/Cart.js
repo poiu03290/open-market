@@ -1,12 +1,12 @@
 import { useState, useEffect, useCallback } from 'react'; 
 import { Link } from 'react-router-dom';
 
-import { getCartList } from '../api/api'
-import { updateCartItem } from '../api/api';
-import { deleteCartItem } from '../api/api';
+import { getCartList } from '../../api/api'
+import { updateCartItem } from '../../api/api';
+import { deleteCartItem } from '../../api/api';
 
-import { CartItem } from '../components/CartItem';
-import { Modal } from '../components/Modal';
+import { CartItem } from '../../components/CartItem';
+import { Modal } from '../../components/Modal';
 import styles from './Cart.module.css';
 
 export const Cart = () => {

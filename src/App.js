@@ -1,15 +1,15 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
-import { MainLayOut } from './components/MainLayOut';
-import { SellerLayOut } from './components/SellerLayOut';
+import { MainLayOut } from './components/layout/MainLayOut';
+import { SellerLayOut } from './components/layout/SellerLayOut';
 import { Main } from './view/Main';
-import { Login } from './view/Login';
-import { Join } from './view/Join';
-import { ProductDetail } from './view/ProductDetail';
-import { Cart } from './view/Cart';
-import { Order } from './view/Order';
-import { SellerCenter } from './view/SellerCenter';
-import { ProductRegistration } from './view/ProductRegistration';
+import { Login } from './view/buyer/Login';
+import { Join } from './view/buyer/Join';
+import { ProductDetail } from './view/buyer/ProductDetail';
+import { Cart } from './view/buyer/Cart';
+import { Order } from './view/buyer/Order';
+import { SellerCenter } from './view/seller/SellerCenter';
+import { ProductRegistration } from './view/seller/ProductRegistration';
 
 import './App.css';
 

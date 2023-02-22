@@ -86,9 +86,10 @@ input[name="member-select"] {
 }
 
 
-.txt-box a {
+.txt-box span {
     text-decoration: none;
     color: #333333;
+    cursor: pointer;
 }
 
 

@@ -89,9 +89,3 @@ export const uploadProduct = async (url, data) => {
 
     return response
 }
-
-export const uploadImage = async (url, data) => {
-    const response = await apiRequest.post(url, data)
-
-    return response
-}

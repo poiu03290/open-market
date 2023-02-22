@@ -2,11 +2,11 @@ import { useState, useRef } from 'react';
 import { Link, useNavigate } from 'react-router-dom'
 import { useDispatch } from 'react-redux';
 
-import { loginAPI } from '../api/api';
-import { getToken } from '../modules/user';
+import { loginAPI } from '../../api/api';
+import { getToken } from '../../modules/user';
 import styles from './Login.module.css';
 
-import Logo from '../assets/Logo-hodu.png'
+import Logo from '../../assets/Logo-hodu.png'
 
 export const Login = () => {
     const navigate = useNavigate();
@@ -77,8 +77,10 @@ export const Login = () => {
             </div>
           </div>
           <div className={styles['txt-box']}>
-            <a href='/join' className={styles.lnk}>회원가입</a>
-            <a href='/findpw'>비밀번호 찾기</a>
+            <Link to='/join'>
+              <span className={styles.lnk}>회원가입</span>
+            </Link>
+            <span onClick={() => alert("UI만 존재합니다 :)")}>비밀번호 찾기</span>
           </div>
         </div>
       )

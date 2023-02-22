@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 
-import styles from '../view/Order.module.css';
+import styles from '../view/buyer/Order.module.css';
 
 
 export const OrderItem = ({ orderInfo, orderData, setOrderData }) => {
