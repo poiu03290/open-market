@@ -59,7 +59,7 @@ export const Order = () => {
             } 
         }
         return maxLengthCheck(e)
-    })
+    }, [])
 
 
     const handleOrderData = useCallback((e) => {

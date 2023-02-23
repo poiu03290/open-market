@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 
 import { getProductList } from '../api/api';
 import { ProductItem } from '../components/ProductItem';

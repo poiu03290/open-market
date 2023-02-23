@@ -16,20 +16,20 @@ export const ProductRegistration = () => {
         product_info: "상품 정보입니다."
     })
 
-    const imageUpload = async () => {
+    const imageUpload = useCallback(async () => {
         const file = ref.current.files[0];
         const reader = new FileReader();
         reader.readAsDataURL(file);
         reader.onloadend = () => {
             setImgFile(reader.result);
         }
-    }
+    }, [])
 
-    const imageUploadButtonClick = () => {
+    const imageUploadButtonClick = useCallback(() => {
         if(!ref.current) return;
 
         ref.current.click();
-    }
+    }, [])
 
     const handleProductData = useCallback((e) => {
         const handleValue = (e) => {
@@ -46,7 +46,7 @@ export const ProductRegistration = () => {
                 image: imgFile,
                 shipping_method: shippingMethod
             })
-    }, [imgFile, shippingMethod])
+    }, [shippingMethod, imgFile])
 
     const saveButtonClick = useCallback(async() => {
         try {

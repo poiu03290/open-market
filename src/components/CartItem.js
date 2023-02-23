@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 
 import { getProductDetail } from "../api/api"
@@ -27,7 +27,7 @@ export const CartItem = ({
         })();
     }, [cartInfo.product_id])
 
-    const setCartInfo = () => {
+    const setCartInfo = useCallback(() => {
         setCart({
             ...cart,
                 product_id: cartInfo.product_id,
@@ -35,9 +35,9 @@ export const CartItem = ({
                 is_active: true,
         })
         set_ID(cartInfo.cart_item_id)
-    }
+    }, [cart, cartInfo, set_ID, setCart])
 
-    const OrderButtonClick = async() => {
+    const OrderButtonClick = useCallback(async() => {
         const orderItem = {...cartItem}
         orderItem.order_kind = 'cart_one_order'
         orderItem.quantity = cartInfo.quantity
@@ -46,7 +46,7 @@ export const CartItem = ({
         localStorage.removeItem('order')
         localStorage.removeItem('cart-order')
         localStorage.setItem('order', JSON.stringify(orderItem))
-    }
+    }, [cartItem, cartInfo.quantity])
 
     return(
         <>

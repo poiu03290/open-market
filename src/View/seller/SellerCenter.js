@@ -23,9 +23,9 @@ export const SellerCenter = () => {
             const { data } = await getSellerProduct('/seller/')
 
             setProductList(data);
-            console.log(data)
+            console.log(productList)
         })()
-    }, [])
+    }, [productList])
 
     return (
         <div className={styles.container}>

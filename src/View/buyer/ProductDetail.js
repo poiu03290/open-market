@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { useParams, Link } from "react-router-dom";
 
 import { getProductDetail } from '../../api/api';
@@ -36,17 +36,17 @@ export const ProductDetail = () => {
         })
     }, [productDetail, count])
 
-    const handleMinus = () => {
+    const handleMinus = useCallback(() => {
         if (count <= 1) return 
         setCount(prev => prev - 1)
-    }
+    }, [count])
 
-    const handlePlus = () => {
+    const handlePlus = useCallback(() => {
         if (count >= productDetail.stock) return
         setCount(prev => prev + 1)
-    }
+    }, [count, productDetail.stock])
 
-    const putInCart = async() => {
+    const putInCart = useCallback(async() => {
         try {
             await putInCartList('/cart/', cart);
             setMessage("장바구니에 추가되었습니다.")
@@ -56,9 +56,9 @@ export const ProductDetail = () => {
             setIsModal(true)
             setModalMODE('ALERT')
         }
-    }
+    }, [cart])
 
-    const orderButtonClick = () => {
+    const orderButtonClick = useCallback(() => {
         const orderItem = {...productDetail}
         orderItem.order_kind = 'direct_order'
         orderItem.quantity = count
@@ -67,7 +67,7 @@ export const ProductDetail = () => {
         localStorage.removeItem('order')
         localStorage.removeItem('cart-order')
         localStorage.setItem('order', JSON.stringify(orderItem))
-    }
+    }, [productDetail, count])
 
     return(
         <div className={styles.container}>

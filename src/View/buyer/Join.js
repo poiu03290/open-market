@@ -39,7 +39,7 @@ export const Join = () => {
   }, [phoneIdentify, phoneMidNum, phoneEndNum])
 
 
-  const DuplicateButtonClick = async () => {
+  const DuplicateButtonClick = useCallback(async () => {
     try {
       const { data } = await DuplicateCheckAPI('/accounts/signup/valid/username/', profile)
 
@@ -48,7 +48,7 @@ export const Join = () => {
 
       setDuplicateCheck({...duplicateCheck, result: false, message: error.response.data.FAIL_Message})
     }
-  }
+  }, [duplicateCheck, profile])
 
 
   const isValidPassword = useMemo(() => {
@@ -105,7 +105,7 @@ export const Join = () => {
       }
     }
 
-  }, [profile, navigate])
+  }, [profile, navigate, joinType])
 
   const IsCheckRegistrationNumber = useCallback(async() => {
     try {
