@@ -31,21 +31,21 @@ export const Cart = () => {
     }, [cart, isModal])
 
 
-    const handlePlus = () => {
+    const handlePlus = useCallback(() => {
         setCart({
             ...cart,
             quantity: cart.quantity + 1
         })
-    }
+    }, [cart])
 
 
-    const handleMinus = () => {
+    const handleMinus = useCallback(() => {
         if (cart.quantity <= 1) return
         setCart({
             ...cart,
             quantity: cart.quantity - 1
         })
-    }
+    }, [cart])
 
 
     const updateQuantity = useCallback(async() => {
@@ -68,21 +68,21 @@ export const Cart = () => {
         setCheckItems([])
     }, [_id])
     
-    const handleCheck = (checked, id) => {
+    const handleCheck = useCallback((checked, id) => {
         if (checked) {
             setCheckID(prev => [...prev, id]);
         } else {
             setCheckID(checkID.filter((el) => el !== id));
         }
-    }
+    }, [checkID])
 
 
-    const onToggleActive = (id) => {
+    const onToggleActive = useCallback((id) => {
         cartList.results.forEach((el) => el.product_id === id ? el.is_active = !el.is_active : undefined);
-    }
+    }, [cartList])
 
 
-    const checkTotalPrice = (checked, cartInfo, cartItem) => {
+    const checkTotalPrice = useCallback((checked, cartInfo, cartItem) => {
         let tempObj = {
             product_id: cartInfo.product_id, 
             quantity: cartInfo.quantity, 
@@ -103,7 +103,7 @@ export const Cart = () => {
         } else {
             setCheckItems(checkItems.filter((el) => el.product_id !== cartInfo.product_id));
         }
-    }
+    }, [checkItems])
 
 
     const totalPrice = checkItems
@@ -111,14 +111,14 @@ export const Cart = () => {
         .reduce((acc, price) => acc + price, 0)
 
 
-    const orderButtonClick = (e) => {
+    const orderButtonClick = useCallback((e) => {
         if (checkID.length < 1) e.preventDefault();
         
         const orderItems = [...checkItems]
 
         localStorage.removeItem('order')
         localStorage.setItem('cart-order', JSON.stringify(orderItems))
-    }
+    }, [checkID, checkItems])
 
     return(
         <>

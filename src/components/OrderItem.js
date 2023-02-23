@@ -4,6 +4,7 @@ import styles from '../view/buyer/Order.module.css';
 
 
 export const OrderItem = ({ orderInfo, orderData, setOrderData }) => {
+    
     useEffect(() => {
         setOrderData(orderInfo.order_kind !== "cart_order" ? {
             ...orderData, 
@@ -15,6 +16,7 @@ export const OrderItem = ({ orderInfo, orderData, setOrderData }) => {
                 order_kind: orderInfo.order_kind,
         })
     }, [orderInfo])
+
     return (
         <>
             <li className={styles.item}>

@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react';
+import { useState, useRef, useCallback } from 'react';
 import { Link, useNavigate } from 'react-router-dom'
 import { useDispatch } from 'react-redux';
 
@@ -16,7 +16,7 @@ export const Login = () => {
     const [profile, setProfile] = useState({ username: '', password: '', login_type: "BUYER" });
     const [message, setMessage] = useState('');
 
-    const LoginButtonClick = async () => {
+    const LoginButtonClick = useCallback(async () => {
       if(profile.username.length <= 0 && profile.password.length <= 0) {
         setMessage("아이디를 입력해 주세요.")
         IdFocus.current.focus();
@@ -35,7 +35,7 @@ export const Login = () => {
           PwFocus.current.value = ""
         }
       }
-    }
+    }, [dispatch, navigate, profile])
     
     return(
         <div className='flex-center'>
